@@ -1,0 +1,353 @@
+[
+  {
+    "filename": "Contour 高级报表与仪表板构建指南.pdf",
+    "pages": 2,
+    "text_length": 1913,
+    "metadata": {
+      "Title": "Contour 高级报表与仪表板构建指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Me: Advanced Dashboarding & Reporting in Contour”（这里的“Co”根据来源\n指代 Contour）是由 Ontologize 团队提供的一门实战进阶课程 1。该课程的核心目标是向用\n户展示如何利用 Palantir Foundry 的低代码分析工具 Contour，去复刻一个原本在 Microsoft\nPower BI 中构建的复杂销售与供应链仪表板 1, 2。\n以下是基于来源对该课程标题及内容的详细解释：\n1. 课程定位：低代码的进阶挑战\n虽然 Contour 被定位为 “低代码或无代码” 的分析应用，但该课程标记为 “中级到高级” 级别\n1, 3。\n● 工具选择标准：课程明确了在 Foundry 中选择 Contour 的时机：如果组织没有特定的\n外部可视化偏好（如 Tableau），且数据尚未进入本体（Ontology），同时用户更倾向于非\n代码操作而非 Python/R 编程，那么 Contour 是最佳选择 4, 5。\n● 功能对标：课程旨在证明 Contour 能够达到与 Power BI 类似的功能对等和美学 parity\n（一致性），包括相似的颜色、字体和交互体验 2。\n2. 核心分析架构：路径与板 (Paths & Boards)\n课程深入讲解了 Contour 的基本运行逻辑，这是构建复杂报表的基础：\n● 路径 (Paths)：类似于 Excel 里的工作表。一个分析可以由多个路径组成，每个路径通\n常有特定的用途（如数据清洗、可视化或查找表）6。\n● 板的线性逻辑 (Linear Flow)：板（Boards）在路径内按顺序应用。上方的板会影响下方\n的板，但反之则不然（例如，在下游应用的过滤器不会影响上游的数据） 6。\n● 路径依赖性 (Path Dependency)：一个路径的起点可以是原始数据集，也可以是另一\n个路径的输出结果。这种依赖关系允许用户在一个“主路径”上应用全局过滤，从而影响\n所有下游分析 7, 8。\n3. “高级 (Advanced)”体现在哪些技术细节？\n标题中的“Advanced”体现在用户需要超越基础的点击操作，使用更复杂的逻辑：\n● 表达式板 (Expression Boards)：这是 Contour 最强大的进阶工具。用户需要编写\nSQL 片段（如 CASE 语句或 CONCAT 拼接）来执行复杂的逻辑 9, 10。例如，将数值手\n动格式化为带“$”符号和“M”单位的字符串，或者进行复杂的数学运算 10, 11。\n● 开窗函数 (Window Functions)：课程教授如何使用 SQL 式的窗口函数（如 RANK 或\nDENSE_RANK）对国家按销售额进行排名，以便仅显示“Top N”数据 12, 13。\n● 分箱与分段 (Bucketing/Binning)：通过 CASE WHEN 逻辑将利润等连续数值划分为\n不同的区间（Buckets），从而实现根据指标对图表进行颜色标记的功能 14, 15。\n● 图表叠加 (Overlays)：为了在 Contour 中实现 Power BI 那样的“带虚线的面积图”，课\n程展示了如何通过添加叠加层（Overlay），将一个面积图和一个线条图（设置为虚线）\n合并在一起 16, 17。\n4. 交互性与参数化 (Interactivity & Parameters)\n高级报表不仅仅是静态的，还需要具备交互能力：\n● 全局参数 (Parameters)：课程教授如何创建参数变量（如“Market”或“Top N”数量），并\n将其链接到过滤器板 18, 19。\n● 动态交互：一旦参数被应用，仪表板用户就可以通过下拉菜单动态调整显示的数据范围\n（如选择特定市场或调整显示的排名数量），而无需进入后台修改逻辑 19, 20。 5. 报表的美学与发布\n● 颜色自定义：为了达到专业级的视觉效果，课程引导用户使用 Hex 颜色代码 手动配置\n图表颜色，以确保品牌或报表的一致性 2, 21。\n● 仪表板策划 (Curating)：最后，用户需要从各个路径中精选出关键的板，“添加到仪表\n板（Add to Dashboard）”，并进行布局调整和版本管理 22, 23。\n总结来说，这个标题代表了一次从“简单拖拽分析”向“复杂逻辑构建”的转变。它教会用户如何\n通过路径依赖管理、SQL 表达式编写、高级图表叠加技术以及参数化交互，在 Foundry 中构\n建出足以媲美专业 BI 工具的工业级供应链分析报表 5, 24。",
+    "size": 169493
+  },
+  {
+    "filename": "Foundry RAG 工作流：PDF 预处理全指南.pdf",
+    "pages": 2,
+    "text_length": 1812,
+    "metadata": {
+      "Title": "Foundry RAG 工作流：PDF 预处理全指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Preparing PDFs for RAG Workflows”（为 RAG 工作流准备 PDF）是 Ontologize 团队提供\n的一门核心实战课程，主要教授如何在 Palantir Foundry 中通过 Pipeline Builder 处理 PDF\n文档，使其满足**检索增强生成（Retrieval-Augmented Generation, RAG）**架构的要求 1。\nRAG 的核心理念是让大语言模型（LLM）能够访问其训练数据之外的特定知识库（如公司的\nPDF 手册），从而生成更准确、有据可查的回答，并避免模型幻觉 2-4。\n以下是根据来源对该教程所涵盖的端到端准备流程的详细解析：\n1. 数据接入与文本提取 (Text Extraction)\n处理流程始于将 PDF 文件上传为 Foundry 的 Media Set（媒体集） 资源 5, 6。\n● 提取方法选择：根据 PDF 的性质，Pipeline Builder 提供了不同的提取策略 7：\n● Raw Text（原始文本）：适用于“机器可读”的 PDF（即可以直接在文中高亮选择文字的\n文档）7。\n● OCR（光学字符识别）：适用于扫描件、照片或非直接可读的 PDF 文档 7, 8。\n● Layout Aware（布局感知）：用于处理包含表格、图像等复杂布局的文档 7。\n● 精准范围控制：用户可以指定提取的具体页码（例如从第 16 页开始，排除目录和索引）\n，以确保后续处理的数据质量 9。\n2. 数据清洗与字符串整合 (Joining Array)\n提取出的文本最初通常以**数组（Array）**的形式存储，每个元素代表一页 10。\n● Join Array 操作：为了防止语义在翻页时被截断（例如一个句子跨越了两页），教程建\n议使用 Join Array 将多页内容合并为一个大的字符串（String） 11, 12。这样可以确保\n在后续的“分块”步骤中保持思路的连贯性 11。\n3. 文本分块 (Chunking)\n这是 RAG 工作流中最关键的预处理步骤之一。**分块（Chunking）**是指将长文档切分为更\n小、更易管理的片段 12, 13。\n● 必要性：\n● 模型限制：嵌入模型和 LLM 都有**上下文窗口（Context Window）**限制，无法一次处\n理整个巨型 PDF 12, 14。\n● 检索精度：当用户提问时，系统应返回最相关的“片段”（如半页纸），而不是整本百科全\n书，以提高回答的针对性 14。\n● 实战配置：教程使用 Chunk String 节点，将分块大小设置为 512 tokens，并根据段\n落、句子和单词的边界进行智能切分 13, 15。\n4. 计算向量嵌入 (Compute Embeddings)\n嵌入（Embedding） 是将文本转换为高维空间的**向量（Vector）**数字序列，用于捕捉文本的\n语义 16, 17。\n● 语义搜索原理：通过比较向量之间的距离（如余弦相似度），系统可以识别语义相近的\n概念。例如，“拿铁”和“咖啡”在空间中的距离会很近，而与“飞机”则很远 16。\n● 模型对齐：用户需选择特定的预训练模型（如 text-embedding-ada-002）来执行推理 17,\n18。\n● 关键原则：必须同时保留原始文本（用于给 LLM 生成回答）和向量数据（用于检索），且\n后续应用层必须使用与生成阶段完全一致的嵌入模型，否则检索结果会失效 17-19。 5. 本体化与应用集成 (Ontology Integration)\n最后一步是将处理后的数据发布到 Ontology（本体） 层 20, 21。\n● 对象建模：创建一个“Chunk（分块）”对象类型，将分块编号（Chunk Number）设为主键\n，并将嵌入字段配置为 Vector 类型 18, 21, 22。\n● 下游赋能：一旦这些数据进入本体，它们就可以直接被 AIP Logic 或 AIP Agent\nStudio 调用，构建出能够根据 PDF 内容进行实时问答的智能体应用 19, 22。\n总结\n该标题代表了一套工业级的非结构化数据处理标准。它不仅教导如何“拆解”PDF，更强调了如\n何通过向量化和本体建模，将杂乱的文档转变为可被 AI “理解”并精准检索的企业知识资产\n23, 24。",
+    "size": 171382
+  },
+  {
+    "filename": "Foundry 无代码数据管道实战手册.pdf",
+    "pages": 2,
+    "text_length": 2021,
+    "metadata": {
+      "Title": "Foundry 无代码数据管道实战手册",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Building Your First Pipeline”是发布在 learn.palantir.com 上的\n一门深度实战课程，由 Ontologize 团队制作 1, 2。该课程的核心目标是教授用户如何使用\nPipeline Builder——Palantir Foundry 的无代码、生产级数据管道构建工具，将原始数据转\n化为可用的清洗后数据资产 2-4。\n以下是根据来源对该课程内容的详细解释：\n1. 核心定位与工具选择\n● 工具定位：Pipeline Builder 是 Foundry 中用于构建数据管道的低代码/无代码方案，而\nCode Repositories 则对应高代码（Pro-code）方案 3, 4。\n● 端到端流程：一个完整的数据管道通常涉及从外部系统接入、原始数据处理、清洗、连\n接，最终生成能够支撑本体（Ontology）、分析或模型的“黄金数据” 3, 4。\n2. 数据准备与预处理 (Data Ingestion & Pre-processing)\n课程模拟了真实的数据集成场景，通过上传不同格式的文件来启动流程：\n● 多格式接入：用户需要下载并上传 CSV、Parquet（针对 Spark 优化的列式存储）和\nJSON 格式的原始数据 5-7。\n● 处理无模式数据：对于 JSON 等没有预设模式（Schema）的非结构化数据，课程演示了\n如何在不编写代码的情况下提取行信息、解析字典结构并生成表格式视图 8-10。\n3. 数据清洗与高级转换 (Cleaning & Advanced Transforms)\n课程详细涵盖了数据治理中的常见清洗动作：\n● 基础转换：包括去除首尾空格（Trim Whitespace）、类型转换（Cast）（例如将字符串格\n式的价格转换为 Double 类型以便计算）11-14。\n● 复杂结构处理：教授如何平铺结构体（Flatten Struct）。例如，将存储在 JSON 字典中\n的地址字段（街道、城市、州）提取出来，并重新**拼接字符串（Concatenate）**成人类\n可读的地址格式 15-21。\n● AI 助手集成：演示了利用 Foundry 的 **AI 助手（AIP Assist）**通过自然语言描述来生\n成复杂的转换逻辑，例如自动识别并生成时间戳的格式字符串 22-25。\n4. 数据集成与问题排查 (Data Integration & Debugging)\n● 对象连接（Joins）：将交易数据（Transactions）与产品（Products）和客户（Customers）\n数据通过**左连接（Left Join）**进行关联 26-29。\n● 识别“坏连接（Bad Join）”：这是课程的一个重点。当连接后的记录数异常增加（例如从\n50 行激增至 172 行）时，引导用户使用 Contour 的直方图进行钻取分析，发现 ID 不\n唯一导致的重复问题，并学习通过更换连接键（如使用 Variation ID 替代 Product ID）\n来修复逻辑 30-37。\n5. 业务逻辑派生与聚合 (Aggregations)\n● 衍生指标计算：通过**乘法转换（Multiply）**计算每笔交易的收入（单价 × 数量），并命\n名为 Revenue 38, 39。\n● 客户终身价值 (CLV)：使用聚合转换（Aggregate/Group By），按客户 ID 分组并计算收\n入总和，从而生成对业务具有重要运营价值的“客户终身价值”数据集 39-42。 6. 部署与管道维护 (Deployment & Maintainability)\n● 实例化输出（Materializing Outputs）：强调 Pipeline Builder 中的节点只是中间结果，\n必须添加“新数据集”输出并执行**部署（Deploy）**动作，数据才会在平台中实际构建并\n可用 34, 43-46。\n● 最佳实践与进阶概念：\n● 管道分层（Segmentation）：建议按照原始（Raw）、清洗（Clean）、丰富（Enriched）和本\n体（Ontology）等阶段对管道进行拆分，以提高可读性和可维护性 47-50。\n● 数据预期（Data Expectations）：设置主动监控检查（如检查主键唯一性、行数范围），\n一旦不符合规则可触发警告或中断构建，防止坏数据传播 51。\n● 增量转换（Incremental Transforms）：对于大规模数据，仅处理新流入的行以减少计\n算负载并提高速度 51, 52。\n通过本课程，用户能够建立起**“将杂乱的原始文件转变为工业级、受治理的数据资产”**的全\n局观，并熟练掌握 Pipeline Builder 的图形化操作界面 1, 53。",
+    "size": 173019
+  },
+  {
+    "filename": "Foundry 管道构建器：LLM 实体提取实战指南.pdf",
+    "pages": 2,
+    "text_length": 1444,
+    "metadata": {
+      "Title": "Foundry 管道构建器：LLM 实体提取实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Entity Extraction in Pipeline Builder”（在 Pipeline Builder 中进行实体提取）是 Ontologize\n团队提供的一门实战技术教程。该教程详细演示了如何在 Palantir Foundry 的 Pipeline\nBuilder 中，利用大语言模型（LLM）从非结构化文档（如 PDF）中自动识别并提取特定的信息\n项（实体） 1, 2。\n以下是基于资料对该标题所涵盖内容的详细解释：\n1. 核心定义与工具定位\n● Pipeline Builder：Foundry 的主要数据集成和转换应用，提供低代码环境来构建数据\n流 1, 3。\n● Use LLM 节点：Pipeline Builder 中的一个核心功能节点。它预设了六种不同的模板\n（分类、情感分析、摘要、实体提取、翻译、空提示词），帮助用户更轻松地编写提示词\n2。\n● 实体提取 (Entity Extraction)：当用户需要从大量文本中提取特定元素（如客户姓名、\n项目名称、日期或特定术语）时，应选择此模式 4。\n2. 核心工作流程\n该标题涉及的工作流展示了如何将 LLM 的推理能力无缝集成到数据管道中：\n● 数据接入（Media Set）：教程首先将 PDF 文档上传并转化为 Media Set（媒体集） 资源\n3。值得注意的是，用户不需要先手动提取 PDF 文本，可以直接将媒体引用（Media\nReference）传入 LLM 节点进行处理 2, 5。\n● 配置提取逻辑：\n● 上下文定义：设定提取的背景信息（例如：地热能源项目） 5。\n● 定义实体类型：明确要提取的目标。在教程的案例中，包括“地点（Place）”、“项目（\nProject）”和“引用论文（Cited paper）” 5, 6。\n● 模型选择与提示词生成：用户可以选择不同的模型（如 Gemini 2.0 Flash 或 GPT-4） 5,\n6。系统会根据填写的模板自动生成系统提示词（指令）和任务提示词 6。\n3. 技术进阶与数据结构化\n为了使提取的结果具备业务可用性，教程强调了以下高级操作：\n● 从字符串到数组（Array of Strings）：为了获取文档中出现的所有相关实体（而不仅仅\n是第一个），必须将输出类型从单一的 String 更改为 Array 6, 7。\n● 结构化输出解析：LLM 返回的结果通常是一个复杂的结构体（Struct） 7。教程教授如何\n使用 “Extract many struct fields”（提取多个结构体字段） 转换操作，将提取出的“地\n点”、“项目”和“论文”分别转化为独立的数据列 8。\n● 端到端自动化：最终生成的带实体信息的表可以部署为标准的数据集（Dataset），直接\n用于后续的分析或作为本体（Ontology）对象的支撑 9。\n4. 业务应用价值\n该技术通过“地热能源技术报告”的案例，展示了如何高效地导航复杂的专业文献库 1。其核心\n价值在于：\n● 替代人工阅读：无需人工逐页查阅即可快速获取关键信息点 4。\n● 提升数据质量：将杂乱的文本信息转化为结构化、可搜索的字段，便于后续的统计分析\n和知识图谱构建 6, 9。 总结来说，这个标题代表了在数据生产线中集成 AI 的前沿实践。它教导用户如何利用\nFoundry 的内置 AI 功能，将非结构化的 PDF 文档规模化地转化为结构清晰、属性完备的行业\n数据库 1, 10。",
+    "size": 149032
+  },
+  {
+    "filename": "Palantir AIP 实战：构建端到端智能工作流.pdf",
+    "pages": 2,
+    "text_length": 1526,
+    "metadata": {
+      "Title": "Palantir AIP 实战：构建端到端智能工作流",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Speedrun Your First AIP Workflow”是 learn.palantir.com 上的\n一门实战导向课程，由 Ontologize 团队（前 Palantir 工程师组成）提供 1。该课程旨在指导用户\n在 Palantir Foundry 中，利用 AIP（人工智能平台） 将大量的非结构化数据转化为可交互的 AI\n驱动应用程序 1, 2。\n以下是根据来源对该标题及课程内容的详细解释：\n1. 核心目标与定义\n该课程的重点是展示如何构建一个端到端的 AIP 工作流。其核心任务是将 PDF 文档（非结构\n化数据）转化为知识图谱（Knowledge Graph），并利用 AI 智能体（Agent）为用户提供基于事\n实的准确答案 1。\n● “Speedrun”（快速起步）：意味着课程侧重于快速实践，带领用户迅速走完从原始数据\n到产出结果的全过程 1, 3。\n● “AIP Workflow”（AIP 工作流）：特指利用 Palantir 的 AI 能力（如大语言模型 LLM）与\n底层数据架构（本体 Ontology）相结合的开发模式 2, 4。\n2. 业务场景：结核病研究库\n课程使用了一个具体的公益组织案例：\n● 背景：一支专注于结核病（Tuberculosis）研究的团队需要高效导航大型研究文献库，以\n扩大药物获取途径 2。\n● 目标应用：构建一个“文献综述应用（Literature Review App）”，用户可以用自然语言\n提问（例如：“为什么多重耐药结核病令人担忧？”），系统会返回精准的证据和可视化\n关系图 2, 4。\n3. 技术架构与操作步骤\n该工作流展示了 AIP 如何与 Foundry 的其他工具链深度集成：\n● 数据摄取（Data Ingestion）：将 PDF 文章上传为 Media Set（媒体集） 2, 5。\n● 文档处理（Pipeline Builder）：\n● PDF 文本提取：使用 OCR 或原始文本提取技术 6。\n● 分块（Chunking）：将长文本拆分为更易于 LLM 处理的短块（Chunks） 7。\n● LLM 抽取：利用大模型提取每块内容的摘要和实体（如疾病、治疗方法） 8, 9。\n● 嵌入（Embeddings）：为文本块生成向量，以便进行语义搜索（Semantic Search） 10。\n● 本体配置（Ontology）：创建“块（Chunk）”和“实体（Entity）”对象，并建立它们之间的多对\n多链接 11-13。\n● 逻辑构建（AIP Logic）：使用 OAG（Ontology Augmented Generation，本体增强生\n成） 模式。这种方法通过将 LLM 与组织自身的本体数据相结合，能够有效避免 AI “幻\n觉”，并提供可追溯的证据 14-16。\n● 可视化与应用（Vertex & Workshop）：\n● 在 Vertex 中创建知识图谱模板，展示实体间的关联 17, 18。\n● 在 Workshop 中搭建最终应用，集成搜索框、关联图谱和 AI 生成的回答 19-21。\n4. 课程的核心价值\n通过这门课程，用户可以理解 AIP 的独特优势：它不只是一个聊天机器人。它通过将 LLM 的\n推理能力与受治理的本体数据（Ontology）结合，实现了一种能够处理复杂、专业数据且高度\n可靠的 AI 开发范式 4, 22。 总结： 该标题代表了一次深度实践，教你如何将散乱的 PDF 文档 转化为一个具备语义搜索、\n知识图谱可视化和事实问答能力的智能化专业应用 21, 23。",
+    "size": 150027
+  },
+  {
+    "filename": "Palantir Contour 工业级数据分析全流程实战指南.pdf",
+    "pages": 2,
+    "text_length": 2067,
+    "metadata": {
+      "Title": "Palantir Contour 工业级数据分析全流程实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Data Analysis in Contour”是发布在 learn.palantir.com 上的一\n个实战教程，由 Ontologize 团队（前 Palantir 工程师）制作 1。该课程专门针对 Palantir\nContour 这一应用进行深度教学，指导用户如何从原始数据出发，通过一系列转换和可视化，\n最终构建出一个交互式的分析看板 1。\n以下是根据来源对该课程内容的详细拆解：\n1. 核心背景与业务场景\n● 业务角色：用户扮演 Titanium Works Manufacturing 公司的数据分析师 1。\n● 分析目标：利用设备数据（Equipment data）和零件数据（Parts data）进行分析，识别高\n风险机械，从而优先安排设备检查并确保生产效率 1。\n● 核心工具：主要使用 Contour（一个低代码分析环境），其特点是分析过程呈线性流向，\n并利用各种“板（Boards）”执行操作 2。\n2. 分析全流程：从预处理到深度分析\nA. 基础操作与数据清洗\n● 创建分析：从零件数据集（Parts dataset）启动 Contour，并进入**编辑模式（Editing\nmode）**进行工作 2。\n● 摘要统计（Summary Statistics）：使用 Calculation board（计算板） 计算零件 ID 和设\n备 ID 的唯一计数（Unique count） 3, 4。\n● 列管理：通过 Multi-column editor（多列编辑器） 重命名列（如将 EQ ID 改为\nEquipment ID）并删除不必要的列（如颜色、重量等） 4, 5。\n● 数据修正：\n● 使用 Find and Replace（查找与替换） 板清除字符串中的杂质（例如去除前缀 p-） 5。\n● 使用 Convert types（类型转换） 将字符串字段（如 Purity）转换为双精度浮点数（\nDouble），以便进行数值计算 6。\n● 使用 Filter（过滤） 板按日期范围或特定条件筛选行 6。\nB. 路径（Paths）与数据集成\n● 路径的概念：Contour 的分析可以像浏览器标签页一样创建多个路径（Paths） 7。新路\n径可以从全新的数据集开始，也可以从现有分析的中间结果开始 7, 8。\n● 数据连接（Join）：在名为 “Parts and Equipment join” 的路径中，将零件数据与设备数\n据集连接起来 8。连接过程中可以添加前缀以避免列名冲突，并设置匹配条件（如设备\nID） 8, 9。\nC. 高级逻辑处理 (Expression Board)\n● SQL 式逻辑：使用 Expression board（表达式板） 编写类似 SQL 的逻辑 9, 10。\n● 派生新指标：\n● 计算平均纯度（Average Purity）：利用开窗函数（Partitioning）按设备 ID 分组计算平均\n值 10。\n● 生成检查警告（Inspection Alert）：使用 CASE WHEN 条件逻辑，根据设备检查时长和\n平均纯度自动生成风险等级（如高、中、低警告） 10, 11。 3. 可视化与参数化 (Visualizations & Parameters)\n● 参数化交互：创建一个名为 “Plant” 的参数（Parameter），并链接到设备工厂列 12。这\n允许最终用户通过多选下拉菜单过滤整个看板的数据，而无需手动编写过滤条件 12,\n13。\n● 核心图表类型：\n● 直方图（Histogram）：展示不同等级警告的频率 14。Contour 的直方图支持交叉过滤，\n点击某个条柱即可过滤下游所有数据 14。\n● 透视表（Pivot Table）：按工厂和 ID 进行分组统计，并可格式化单元格数据（如百分比\n或货币） 15。\n● 散点图与条形图：展示平均纯度与零件计数的分布，并支持**堆叠（Stacked）或分组（\nGrouped）**显示 16, 17。\n4. 看板发布与成果分享\n● Dashboard（看板）：看板是 Contour 分析的一个精简、用户友好的视图 18。用户可以\n将分析过程中生成的直方图、透视表和图表“添加到看板（Add to dashboard）”中 18。\n● 最终交付：\n● 在看板视图中，之前设置的**参数（Parameters）**会出现在侧边栏，供非技术用户进行\n筛选交互 18。\n● 结果可以导出为 PDF，或将数据板内容复制到 Notepad 应用中进行更正式的汇报 19\n。\n5. 总结\n该课程不仅教会用户如何使用单一的 Board，更强调了如何通过 Path 的组织逻辑和\nParameter 的交互设计，构建出一个具备工业级水平的设备风险监测系统 19。通过此流程，原\n本杂乱的原始数据变成了能够指导生产决策的高风险机械检查清单 1, 19。",
+    "size": 170336
+  },
+  {
+    "filename": "Palantir Foundry 业务流程挖掘实战指南.pdf",
+    "pages": 1,
+    "text_length": 1405,
+    "metadata": {
+      "Title": "Palantir Foundry 业务流程挖掘实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Speedrun: Mining Your First Business Process”是 Palantir 官方学习平\n台（learn.palantir.com）上的一门实战进阶课程，由 Ontologize 团队制作 1。该课程的核心是\n教授如何使用 Palantir Foundry 中名为 Machinery 的流程优化工具，通过挖掘（Mining）现有\n的日志数据来识别业务流程中的瓶颈和效率低下之处 1, 2。\n以下是基于来源对该标题及课程内容的详细解释：\n1. 核心工具：Machinery\n● 工具定位：Machinery 是 Foundry 的一个流程优化和分析工具（目前处于测试阶段），\n专门用于分析组织内部流程的运行模式 1, 2。\n● 核心功能：它允许用户通过导入状态转换日志，自动生成业务流程的有向图（Directed\nGraph），从而直观地看到每个阶段的等待时间、处理频率和异常路径 3。\n2. 业务场景：保险理赔（Claims）\n● 分析对象：课程以保险理赔处理为案例，通过挖掘理赔单在不同状态（如“已提交”、“审\n核中”、“已批准”等）之间的转换日志，来查找流程问题 3-5。\n● 核心挑战：识别理赔单为什么会“卡”在某个状态（例如“调查中”），并量化这些积压订单\n对公司财务的影响 6-8。\n3. 核心流程与技术环节\n该课程被称为“Speedrun（快速起步）”，因为它带用户快速走通了从原始数据到产出结果的四\n个关键步骤：\n● 数据准备与预处理：\n● 上传三类数据：理赔数据（Claims）、状态日志（Logs）和客户数据（Customers） 4。\n● 必须将原始日期字段转换为 Timestamp（时间戳） 类型，否则本体同步可能会失败 9。\n● 本体建模（Ontology）：\n● 在本体管理器中创建“理赔”和“客户”对象，并建立一对多的链接关系 10-12。\n● 流程挖掘（Process Mining）：\n● 配置 Machinery：映射流程 ID（如理赔单 ID）、状态（如新状态名称）和时间戳 5。\n● 生成流程图：通过日志自动推断出状态之间的转换路径 3。\n● 设置预期（Expectations）：例如，如果某个状态的停留时间超过设定的阈值（如理赔单\n处于调查状态超过 2400 小时），该节点会在图中变红，提示存在异常 7, 13。\n● 构建操作应用（Workshop）：\n● 创建一个 Workshop 应用，集成 Process Explorer 挂件 14。\n● 定义自定义指标：例如计算处于特定状态的理赔单的“总价值（Total Value）”，以评估瓶\n颈造成的资金影响 15, 16。\n● 设置自动化预警：当不符合规则的理赔单进入特定状态时（如非高风险客户的理赔单进\n入了“调查中”状态），系统会自动发送通知 17-19。\n4. 学习该课程的价值\n通过“挖掘”业务流程，用户不仅能看到流程“应该”是什么样子，还能看到它在现实数据中“实际”\n是如何运行的 3。这有助于数据科学家和业务分析师：\n1. 量化影响：了解流程延误带来的具体金钱损失 8, 16。\n2. 发现异常：找出由于沟通不畅或规则过时导致的错误节点 8, 20。\n3. 实时监控：建立监控机制，确保未来的流程运行符合预期标准 17, 18。",
+    "size": 145546
+  },
+  {
+    "filename": "Palantir Foundry 临床数据科学全流程指南.pdf",
+    "pages": 2,
+    "text_length": 1499,
+    "metadata": {
+      "Title": "Palantir Foundry 临床数据科学全流程指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Speedrun: Data Science Fundamentals”是 learn.palantir.com 上的一门实\n战课程，旨在指导用户如何结合使用 Foundry 的代码与无代码工具，完成从原始数据处理到\n交互式成果发布的完整数据科学工作流 1, 2。\n以下是根据来源对该课程内容的详细解释：\n1. 核心目标与业务场景\n● 核心目标：该课程强调“广度优先”，带用户快速走通从非结构化数据（PDF）和结构化数\n据（CSV）中提取、分析并可视化见解的全过程 1, 2。\n● 业务背景：课程模拟了一个临床研究（Clinical Study）场景，研究药物对患者产生的不\n良反应（Adverse Events） 3, 4。\n● 原始数据：包含患者的人口统计数据（CSV）、不良反应记录（CSV）以及患者反馈调查（\nPDF 扫描件） 5-7。\n2. 核心技术环节：端到端工作流\n该课程将工作流分为三个主要阶段：\n第一阶段：使用 Pipeline Builder 进行数据预处理与 AI 集成\n● 非结构化数据处理：利用 Pipeline Builder 将 PDF 转化为文本，并使用 join array 将多\n页内容合并为单一字符串 8-10。\n● AIP 赋能：集成大语言模型（如 Gemini 或 GPT-4），通过编写提示词（Prompt）自动从\n患者反馈中提取“患者 ID”、“情感评分”和“文字摘要” 11-14。\n● 数据整合：将清洗后的 CSV 列表与 AI 提取的结构化数据进行左连接（Left Join），生\n成一张包含人口统计学特征、用药分组合反馈摘要的汇总表 15-17。\n第二阶段：使用 Jupyter Workspace 进行深度分析\n● 环境准备：在 Foundry 内部启动 Jupyter Lab，并安装 Matplotlib 和 Pandas 等\nPython 库 18-21。\n● 见解生成：编写 Python 代码分析数据，例如构建直方图来观察不同年龄段患者在“安\n慰剂组”与“治疗组”中的分布，以及不同不良反应类别的年龄分布趋势 22, 23。\n第三阶段：使用 Streamlit 发布交互式报告\n● 应用构建：使用 Streamlit 框架将 Python 脚本转化为 Web 应用程序 24, 25。\n● 交互功能：构建一个“不良反应年龄分布探索器（Adverse Event Age Distribution\nExplorer）”，允许最终用户通过下拉菜单选择特定症状（如焦虑、食欲下降），实时查看\n该群体的年龄分布图和患者反馈摘要 26-29。\n3. 关键优势：维护数据血缘（Data Lineage）\n课程强调在 Foundry 中进行数据科学工作的独特价值在于维护数据出处（Data Provenance）\n30。\n● 可视化追踪：通过 Data Lineage 应用，用户可以清晰地看到从原始 PDF 和 CSV 到最\n终 Streamlit 应用的完整链路 30, 31。\n● 可重现性：即使是无代码的 Pipeline Builder 步骤，也会生成**伪代码（Pseudo-code）**\n供分析师审计，确保研究结果的透明和可追溯 31, 32。 4. 课程总结\n该课程为数据科学家提供了一套完整的工具箱，展示了如何不再局限于本地机器的孤岛式开\n发，而是利用 Pipeline Builder、AIP Logic 和 Jupyter 构建起一套工业级、受治理且可自动\n更新的临床分析系统 2, 30。",
+    "size": 150796
+  },
+  {
+    "filename": "Palantir Foundry 代码存储库深度实践指南.pdf",
+    "pages": 2,
+    "text_length": 1801,
+    "metadata": {
+      "Title": "Palantir Foundry 代码存储库深度实践指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Transforming your Data with Code Repositories”是\nlearn.palantir.com 平台上的一门深度实战课程，由 Ontologize 团队提供教学指导 1。该课程\n专注于教授用户如何使用 Palantir Foundry 中的 Code Repositories（代码存储库） 应用，通\n过编写代码的方式构建生产级的数据转换管道 1。\n以下是根据来源对该课程内容的详细解释：\n1. 核心定位：代码驱动的数据处理 (Pro-code)\n● 工具对比：Foundry 提供两种构建数据管道的方式：Pipeline Builder（适合非代码开发\n者）和 Code Repositories（适合偏好代码的开发者）1。\n● 开发环境：Code Repositories 是一个基于 Web 的集成开发环境 (IDE)，具备 Git 集成、\n计算配置文件（Compute Profiles）访问等常见 IDE 功能 1, 2。\n● 技术栈：课程主要使用 PySpark 结合 Foundry 的 API 来编写转换逻辑 2, 3。\n2. 业务场景：保险理赔分析\n● 背景：用户扮演全球保险公司的理赔处理人员，任务是向首席财务官（CFO）汇报各业\n务线的年度业绩 4。\n● 原始数据：处理两个核心数据集：历史理赔数据 (Claims) 和相关的保单数据\n(Policies) 4, 5。\n3. “深度潜入”涵盖的技术环节\n该课程通过一个完整的开发周期，带用户练习最常见的开发模式：\n● 环境初始化：\n● 创建专门的项目和文件夹结构（如 logic、data/raw、data/prepared）来组织资产 4, 6。\n● 初始化 Python 转换存储库，并学习如何通过资源 ID (RID) 或文件系统路径引用输入\n数据集 6-8。\n● 核心转换操作：\n● 数据清洗 (Cleaning)：使用正则表达式清除字符串中的杂质（如 # 符号），并将日期字\n段从字符串类型转换 (Cast) 为标准日期格式 9-11。\n● 数据过滤 (Filtering)：利用 PySpark 函数根据布尔值列（如 is_accepted）筛选有效行\n12, 13。\n● 多表关联 (Joining)：通过 transform_df 装饰器引入多个输入，利用共享键（如\npolicy_id）执行左连接 (Left Join)，从而将保单中的“业务线 (LOB)”信息整合到理赔数\n据中 14-16。\n● 数据聚合 (Aggregation)：使用 groupBy 方法计算各业务线的平均理赔成本 17, 18。\n● 代码发布与构建：\n● 预览 (Preview)：在不写入磁盘的情况下查看转换后的数据样貌 9, 19。\n● 提交 (Commit)：保存代码状态并触发持续集成 (CI) 检查，验证存储库的一致性 19, 20\n。\n● 构建 (Build)：启动 Spark 作业执行逻辑，并在 Foundry 文件系统中实例化输出数据集\n19, 21, 22。\n4. 协作与分支管理 (Collaboration)\n作为深度教程，它还涵盖了工业级开发的最佳实践：\n● 分支保护 (Branch Protection)：将 master 分支设为只读，以保护生产级代码 23, 24。\n● 分支开发：从主分支切出新分支进行功能开发 18。 ● 合并流程 (Merge/Pull Request)：通过合并请求 (Pull Request) 描述变更，并利用“压\n缩并合并 (Squash and merge)”等 Git 技术将代码合并回主干 25-27。\n5. 最终产物与可追溯性\n● 数据血缘 (Data Lineage)：在数据血缘应用中观察从原始 CSV 到聚合报告的全路径\n22, 28。\n● 伪代码查看：对于由代码生成的资产，用户可以在 Data Lineage 中直接查看其背后的\nPySpark 逻辑 28。\n总结来说，这个标题代表了一次从零到一的 Pro-code 开发实践。它不仅教导如何编写\nPySpark 代码，更重要的是教导如何在 Foundry 的受控环境下管理代码生命周期、数据质量\n和团队协作。",
+    "size": 165488
+  },
+  {
+    "filename": "Palantir Foundry 应用开发深度实战指南.pdf",
+    "pages": 2,
+    "text_length": 1766,
+    "metadata": {
+      "Title": "Palantir Foundry 应用开发深度实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Building Your First Application (update)”是 Palantir 官方学\n习平台（learn.palantir.com）上的一门核心进阶课程，由 Ontologize 团队提供指导 1, 2。该课\n程专注于教授用户如何利用 Palantir Foundry 的 Workshop 应用构建器，在**本体（Ontology\n）**之上开发功能丰富、具有交互性的运营级应用程序 2-4。\n以下是基于来源对该标题及课程更新内容的详细解释：\n1. 核心工具：Workshop 应用构建器\nWorkshop 是 Foundry 的低代码应用开发环境。\n● 点选式界面：它允许开发者通过简单的点击和配置（Point-and-click），而非编写大量代\n码，来构建复杂的企业级应用 2, 3。\n● 驱动核心：应用完全由本体中的**对象（Objects）、链接（Links）和操作（Actions）**驱动\n2-4。\n● 运营闭环：不同于单纯展示数据的仪表板，Workshop 旨在创建操作型应用（\nOperational Applications），让用户能够在探索数据的同时做出决策并直接修改底层\n系统状态 1-3。\n2. 业务背景：供应链与货运合并\n该课程设定了一个具体的供应链管理场景，使用户能够代入专业角色：\n● 角色定位：用户扮演货运经理或物流协调员 1, 5。\n● 业务目标：通过识别同一出发地、目的地且时间重合的货运任务，利用车辆的剩余容量\n进行合并发货（Consolidation），从而为公司节省成本并提高效率 6-8。\n● 本体模型：应用构建在包含“产品”、“货运”、“车辆”和“地点”等对象及其关联关系的本体\n模型之上 5, 7, 9, 10。\n3. “深度潜入（Deep Dive）”涵盖的关键环节\n该课程之所以称为“深度潜入”，是因为它详尽地演示了构建生产级应用所需的每一个环节：\n● 数据资产准备 (Marketplace)：\n● 学习如何从 Marketplace（Foundry 的数据产品商店）安装包含对象类型、数据集和链\n接类型的预配置本体包 9-12。\n● 变量与数据流管理 (Variables)：\n● 变量是控制应用内数据流动的关键。课程教授如何创建“对象集变量”，并利用**变量链\n（Variable Chaining）**实现组件间的复杂联动（例如：点击过滤器后，图表和表格同步更\n新） 13-17。\n● 交互式组件构建 (Widgets)：\n● XY 图表与表格：用于可视化每日货运量并展示详情 18-22。\n● 甘特图 (Gantt Chart)：作为该应用的核心，用于直观查看货运时间表的重叠情况\n23-25。\n● 实现业务逻辑 (Actions & Functions)：\n● 操作 (Actions)：在本体层定义“标记为待合并”等动作，使用户能在应用前端点击按钮\n直接更新本体数据 26-29。\n● TypeScript 函数：当标准 Action 无法满足需求时（例如需要**多选（Multi-select）**并一\n次性处理多个对象），教授如何编写逻辑函数来支撑 Action 30-34。\n● 布局、美化与条件展示：\n● 学习使用页面边距（Padding）、容器格式（Contained）以及条件可见性（Conditional\nVisibility）（例如：仅在特定标签页下才显示操作按钮）来优化用户体验 35-40。 4. 标题中“update（更新）”的意义\n标题后缀的 (update) 表明该课程反映了 Palantir 对 Workshop 及其底层架构（如对象存储 V2\n、Actions 配置界面）的最新功能升级。它确保了开发者学习的是当前最受推荐的开发模式，\n例如更直观的变量依赖图（Dependency Graph）和增强的 Marketplace 安装流程 41-44。\n总结来说，这个标题代表了一次从静态本体到动态运营环境的全生命周期实践。它不仅教你如\n何放置组件，更核心的是教你如何将业务逻辑（合并发货）转化为一个受治理的、可闭环操作\n的数字员工界面 45-47。",
+    "size": 160813
+  },
+  {
+    "filename": "Palantir Foundry 应用开发进阶指南.pdf",
+    "pages": 2,
+    "text_length": 1713,
+    "metadata": {
+      "Title": "Palantir Foundry 应用开发进阶指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Building your first application”是 learn.palantir.com 上的一门\n实战课程，由 Ontologize 团队（由前 Palantir 工程师组成）提供 1。该课程的核心目标是指导用\n户在 Palantir Foundry 中使用 Workshop 应用构建一个功能齐全、可操作的业务应用程序 1,\n2。\n以下是根据来源对该课程内容的详细介绍：\n1. 核心目标与业务场景\n该课程围绕物流与货运管理（Logistics Management）展开，旨在构建一个名为“货物操作中心（\nShipment Operation Center）”的应用 1, 2。\n● 目标用户：货运经理或物流协调员 1。\n● 核心功能：审查货物状态、分析产品量与车辆容量，并根据数据决定是否将特定货物\n进行合并（Consolidation），以节省成本和时间 1, 3, 4。\n2. 准备工作与数据准备\n在开始构建应用之前，用户需要完成以下准备工作：\n● 权限要求：用户需在项目中拥有 Editor（编辑） 角色，且具备编辑本体（Ontology）和访\n问 Marketplace 的权限 5, 6。\n● Marketplace 安装：课程引导用户从 Marketplace 安装一个预配置的名为“Building\nyour first application”的产品，其中包含 5 个对象类型、关联的数据集和链接类型 6, 7。\n● 本体同步：安装后，需确保数据已同步到本体存储服务（Ontology Storage Service），\n并生成可用的对象 8。\n3. 应用构建核心流程 (Workshop 应用)\n课程通过以下步骤教授如何将原始对象转化为交互式界面：\n● 变量驱动逻辑：Workshop 的核心是通过**变量（Variables）**存储和传递数据 2, 9。用\n户需创建对象集变量（如“所有货物”），并学习如何通过变量将过滤器与图表串联起来\n2, 10, 11。\n● 组件（Widgets）布局：\n● 过滤器（Filter List）：用于按起始地、目的地或日期筛选货物 12。\n● XY 图表（Chart XY）：展示货物数量的分布，并支持多层数据展示（如同时显示货物数\n和产品量）9, 13, 14。\n● 对象表格（Object Table）：显示详细的货物信息清单 15, 16。\n● 甘特图（Gantt Chart）：直观展示货物的发运和到达时间表，帮助用户识别时间重叠且\n有合并潜力的订单 4, 17。\n● 样式优化：利用布局配置实现紧凑填充（Compact Padding）、无边框设计（Borderless\nsections）和自定义标题样式，提升用户体验 18-20。\n4. 赋予应用操作能力 (Actions & Functions)\n该课程不仅仅是展示数据，更强调“可操作性”：\n● 本体操作（Actions）：用户学习如何创建一个“标记货物进行合并”的操作 21, 22。通过\n点击应用中的按钮，用户可以直接修改底层本体对象的状态（Status）23, 24。\n● 代码支持（Functions）：对于需要同时处理多个对象或更复杂逻辑的场景，课程介绍了\n如何编写 TypeScript 函数来支持操作 25, 26。\n● 条件显示：通过布尔变量控制按钮的可见性。例如，仅当用户切换到特定的“甘特图”标\n签页时，才显示“标记合并”按钮 27-29。 5. 数据科学与治理的结合\n课程强调在 Foundry 中构建应用的优势在于维护了数据出处（Data Provenance） 30, 31。\n● 通过 Data Lineage（数据血缘），用户可以清晰地看到从原始数据集到本体对象，再\n到最终 Workshop 分析看板的完整链路 31, 32。\n通过这门课程，用户可以掌握 Workshop 开发的通用模式：连接变量 -> 串联组件 -> 集成操\n作逻辑，从而构建出能够支撑真实生产决策的应用程序 9, 29。",
+    "size": 159527
+  },
+  {
+    "filename": "Palantir Foundry 应用构建深度实战指南.pdf",
+    "pages": 2,
+    "text_length": 1560,
+    "metadata": {
+      "Title": "Palantir Foundry 应用构建深度实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Building Your First Application”是 Palantir 官方学习平台（learn.palantir.com）\n上的一门核心实战课程，由 Ontologize 团队制作 1, 2。该课程的核心目标是指导用户使用\nWorkshop——Palantir Foundry 的低代码应用程序构建工具，在**本体（Ontology）**之上创\n建功能丰富、具有交互性的运营级应用 1, 3。\n以下是基于来源对该标题及课程内容的详细解释：\n1. 核心工具：Workshop\n● 工具定位：Workshop 是 Foundry 的应用构建器，允许用户通过简单的“点选”界面，利\n用本体中的对象（Objects）、链接（Links）和操作（Actions）来构建复杂的应用程序 1, 4\n。\n● 核心功能：不同于仅仅展示数据的看板（如 Contour），Workshop 构建的是运营级应用\n（Operational Applications），用户不仅可以探索数据，还能直接做出决策并执行操作\n，将结果写回底层系统 5-7。\n2. 业务场景：供应链与发货管理\n● 用户角色：用户在课程中扮演供应链专家或物流协调员的角色 8, 9。\n● 核心任务：监控货运状态，并根据卡车容量、货物大小等信息，识别出可以进行**合并\n发货（Consolidation）**的机会，从而优化物流效率、降低成本 5, 8, 9。\n● 本体模型：应用依赖于一个包含“产品（Product）”、“货运（Shipment）”、“车辆（Vehicle）”\n和“地点（Location）”等对象类型的本体模型 9-11。\n3. “深度潜入（Deep Dive）”涵盖的技术环节\n该课程通过一个完整的开发周期，教授用户 Workshop 的核心开发模式：\n● 数据资产安装（Marketplace）：\n● 学习如何从 Marketplace（Foundry 的数据产品商店）安装预配置的本体包，包括 5 个\n对象类型及其背后的数据集 12-14。\n● 变量与数据流管理（Variables）：\n● 变量是 Workshop 内部数据流动的控制核心 15, 16。\n● 课程教授如何创建“对象集变量（Object Set Variables）”，并利用变量链接实现组件间\n的联动（例如：在左侧列表选择过滤器，右侧图表实时更新） 17-20。\n● 界面组件构建（Widgets）：\n● XY 图表：通过天数对到货量进行分桶展示 21-23。\n● 对象表格（Object Table）：展示货物和发货的详细属性 24-26。\n● 甘特图（Gantt Chart）：直观展示发货计划，帮助识别在时间上重合的运输任务 27-29。\n● 实现运营闭环（Actions & Functions）：\n● 操作（Actions）：在本体管理器中定义“标记为待合并”的动作，作为用户与数据交互的\n“动词” 30-32。\n● TypeScript 函数：当需要更复杂的商业逻辑时（例如一次性标记多个货运单），学习如\n何编写函数来支撑 Action 33-35。\n● 布局与美化（Layout & Styling）：\n● 使用页面（Page）、层级（Sections）和内距（Padding）来优化视觉体验，使应用看起来专\n业且易于使用 36-39。 4. 学习该课程的价值\n通过“深度潜入”这个过程，用户将掌握从静态本体到动态工具的转化能力 1。这不仅仅是学会\n拖拽组件，更是学会如何构建一个能够闭环处理业务问题的数字环境，让一线运营人员能够基\n于单一事实来源（Single Source of Truth）做出智能决策 6, 7, 40。",
+    "size": 148441
+  },
+  {
+    "filename": "Palantir Foundry 数据保护与治理实战指南.pdf",
+    "pages": 1,
+    "text_length": 1354,
+    "metadata": {
+      "Title": "Palantir Foundry 数据保护与治理实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Data Protection Tools in Foundry”是 learn.palantir.com 上的一门深度实战课\n程，旨在指导用户掌握 Foundry 平台中用于数据保护和治理的核心工具集 1。该课程强调通过\n技术手段确保数据安全，是数据治理框架的重要组成部分 1, 2。\n根据来源，该标题涵盖的三个核心工具及其功能如下：\n1. Checkpoints（检查点）：理由驱动的行为管控\n● 核心定义：Checkpoint 是一种交互式提示，当用户在 Foundry 中执行敏感操作（如导出\n数据、下载文件）时，系统会强制要求用户提供操作理由或合规性确认 3, 4。\n● 配置与触发：管理员可以根据命名空间、特定用户组或数据标记（Marking）来设置\nCheckpoint 的触发范围 4, 5。\n● 理由类型：支持多种证明方式，包括简单的确认勾选（Acknowledgement）、下拉菜单\n选择原因、文本回复或重新进行身份验证 6。系统会记录这些日志，以便后续审计 7。\n2. Sensitive Data Scanner（敏感数据扫描器）：风险自动识别\n● 核心定义：该工具用于自动扫描并标记项目中的敏感信息（如个人身份信息 PII），避免\n依赖人工检查庞大的数据集 7, 8。\n● 匹配逻辑：支持使用平台预设的条件（如电子邮件、社保号 SSN、电话号码等）或通过**\n正则表达式（RegEx）**自定义匹配规则（例如匹配“婚姻状况”等特定字段） 9, 10。\n● 自动化响应：扫描发现敏感数据后，系统可以执行自动操作，例如创建问题单（Issue）或\n自动应用**安全标记（Marking）**来限制访问 11。\n3. Cipher（加密与脱敏）：数据混淆技术\n● 核心定义：Cipher 是 Foundry 的核心混淆工具，用于对敏感字段进行加密处理，支持\n可逆加密和不可逆混淆 12-14。\n● 管理机制：\n● Cipher Channel（频道）：定义加密算法和加密系统（如确定性加密） 13, 14。\n● Cipher License（许可证）：充当访问密钥。管理员可以分别针对数据集操作或本体（\nOntology）操作创建许可证，严格控制谁能加密或解密特定数据 14, 15。\n● 应用场景：用户可以在 Pipeline Builder 中对员工姓名等字段进行加密，使数据在物理\n存储中显示为密文 15, 16。在应用层（如 Object Explorer），只有拥有相应解密许可证\n的用户才能查看原始值 17, 18。\n4. 治理角色与综合应用\n● 权限要求：要配置和管理这些工具，用户通常需要在 Foundry 中具备 Data\nGovernance Officer（数据治理专员） 角色 2。\n● 安全防御体系：这些工具通常与 Markings（安全标记） 结合使用，共同实现“数据最小\n化”原则，确保只有获得授权的人员在合规的场景下才能接触敏感数据 2, 12。\n通过学习这门课程，用户可以构建一个**从自动检测风险（Scanner）、到操作合规约束（\nCheckpoints）、再到物理数据加密（Cipher）**的完整数据保护链路 2, 18。",
+    "size": 144007
+  },
+  {
+    "filename": "Palantir Foundry 数据分析实战全解.pdf",
+    "pages": 2,
+    "text_length": 1838,
+    "metadata": {
+      "Title": "Palantir Foundry 数据分析实战全解",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Data Analysis in Contour”是 Palantir 官方学习平台（learn.palantir.com）上的\n一门基础进阶课程，由 Ontologize 团队提供实战指导 1, 2。该课程旨在教导用户如何使用\nPalantir Foundry 中的 Contour 应用，通过点击式（Point-and-click）的操作完成从原始数据清\n洗到交互式看板构建的全流程分析 2, 3。\n以下是基于来源对该标题所涵盖内容的详细解释：\n1. 核心工具定位：什么是 Contour？\nContour 是 Foundry 中一个低代码或无代码的数据分析和仪表板工具 2, 4。\n● 适用对象：它主要用于处理数据集（Data Sets），而当用户需要处理本体（Ontology）对\n象时，则应选择 Quiver 5。\n● 核心优势：用户无需编写复杂代码即可进行复杂分析，且分析过程会随底层数据的更\n新而自动更新 3。\n2. 业务场景：Titanium Works 制造公司\n课程设定了一个具体的业务背景，使用户能够带入数据分析师的角色 1, 6：\n● 目标：分析 Titanium Works Manufacturing 的设备（Equipment）和零件（Parts）数据 1,\n7。\n● 任务：通过识别高风险机械，优化并排定设备检查的优先级，从而确保生产效率 1, 7。\n3. “深度潜入（Deep Dive）”涵盖的技术环节\n该课程被称为“深度潜入”，是因为它详尽地展示了 Contour 的多个核心功能模块：\n● 数据清洗与准备（Data Cleaning）：\n● 利用板（Boards）（Contour 的基本构建块）按线性顺序执行操作 8-10。\n● 使用 Calculation（计算板） 生成汇总统计数据（如唯一计数） 11, 12。\n● 通过 Multicolumn Editor（多列编辑器） 重命名或删除不必要的列，以保持分析简洁\n13, 14。\n● 使用 Find and Replace（查找与替换） 清洗字符串，并利用 Convert Types（转换类\n型） 将字符串（如带有前缀的纯度值）转化为双精度浮点数（Double） 15-18。\n● 多路径分析（Paths）：\n● 介绍**路径（Paths）**的概念。路径类似于浏览器标签页，允许用户从原始数据集或之\n前路径的结果出发，开启新的分析分支 19-21。\n● 数据集成与关联（Joining）：\n● 演示如何将“零件”路径的结果与“设备”数据集进行连接（Join）（类似于左连接），以便将\n设备产能、所属工厂和检查日期等信息整合在一起 22-26。\n● 高级逻辑构建（Expression Board）：\n● 教授使用 Expression Board（表达式板） 编写类似 SQL 的逻辑来创建衍生列（\nDerived Columns） 26, 27。\n● 实例：计算每台设备的平均零件纯度，并使用 CASE WHEN 语句根据检查时间和纯度\n指标自动生成不同严重程度的“检查警报” 27-30。\n4. 交互性与可视化\n● 参数化过滤（Parameters）：创建参数（如“工厂名称”），让看板最终用户能通过侧边栏控\n制过滤器，而不必直接修改底层的分析逻辑 31-34。\n● 多样化图表：构建直方图（Histogram）、透视表（Pivot Table）和各种图表（如散点图、柱\n状图） 35-43。 ● 联动效应：在 Contour 中，可视化本身也是过滤器。用户点击图表中的某个条形，下游\n的所有分析和图表都会自动筛选该部分数据 35, 40, 44。\n5. 看板策划与报告发布\n● 仪表板（Dashboard）：将分散在各个路径中的关键图表和透视表进行策划（Curating）\n，组合成一个整洁、用户友好的交互式看板 45-47。\n● Notepad 集成：展示如何将 Contour 图表复制到 Notepad（记事本） 中，利用其富文本\n编辑能力生成专业报告，并设置自动化（Automate）按月或按周将 PDF 报告发送至相\n关人员邮箱 48-52。\n总结： 该标题代表了一次完整的端到端数据分析实践。它不仅教你如何点击工具，更教你如何\n将杂乱的制造业原始数据转化为一套具备预警逻辑、交互过滤能力和自动化汇报功能的专业\n分析系统 48, 52。",
+    "size": 165318
+  },
+  {
+    "filename": "Palantir Foundry 数据接入与同步指南.pdf",
+    "pages": 2,
+    "text_length": 2009,
+    "metadata": {
+      "Title": "Palantir Foundry 数据接入与同步指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Creating Your First Data Connection (update)”是发布在 learn.palantir.com\n上的一门课程，由 Ontologize（由前 Palantir 工程师组成的培训团队）提供 1。该课程旨在指\n导用户如何将各种外部系统的数据连接并摄取（ingest）到 Palantir Foundry 中，重点涵盖了文\n件系统、关系型数据库和 REST 端点这三种主要的数据源类型 1。\n以下是基于来源对该课程内容的详细介绍：\n1. 核心概念与准备工作\n在开始实际操作之前，课程强调了几个关键的基础知识：\n● 权限与安全：由于从 Foundry 外部拉取数据涉及信息安全，因此需要特定的高级权限\n2。如果用户缺乏权限，通常需要联系平台管理员或信息安全官（ISO） 2, 3。\n● Egress Policy（流出策略）：这是连接外部系统的关键。它是由 ISO 批准的策略，允许\n流量从 Foundry 流向特定的外部地址 3, 4。课程中涉及的所有连接都需要配置或使用\n现有的 Egress Policy 3, 5。\n● Source（源）与 Sync（同步）的概念：\n● Source 包含连接外部系统的指令（如 URL、凭据、端口号） 6。\n● Sync 包含从 Source 中检索哪些具体数据的指令（如特定的数据库表、S3 存储桶中的\n特定文件） 4。\n● 关系：一个 Source 可以有多个 Sync，但一个 Sync 只能属于一个 Source（一对多关\n系） 4。\n2. 三种主要连接类型的摄取流程\nA. 连接 S3 存储桶（文件系统）\n这是最基础的连接练习，通过 Data Connection 应用完成 4, 7：\n1. 配置 Source：输入 S3 的存储桶 URL、区域（如 EU-West-1）以及访问密钥（Access\nKey/Secret） 8。\n2. 设置 Egress Policy：选择或请求允许访问该 S3 地址的策略 5。\n3. 定义输出文件夹：通常在 Foundry 的项目文件夹内创建一个名为 raw 的文件夹，用于\n存放生成的原始数据集 9。\n4. 创建 Sync：浏览 S3 源中的文件（如 CSV 文件），将其添加为同步任务 10。\n5. 应用架构（Schema）：初始摄取的 CSV 在 Foundry 中只是文件形式，需要点击“Apply\na schema”让 Foundry 推断其结构并将其渲染为表格数据集 11。\nB. 连接 PostgreSQL（关系型数据库）\n连接数据库的步骤与 S3 类似，但涉及更多的网络和安全配置 12：\n1. 连接详情：输入主机名、端口（默认 5432）、数据库名称和身份验证凭据 12, 13。\n2. SSL 配置：通常需要将 SSL 模式设为 Require，并下载并粘贴服务器证书（server.pem\n）的内容 13, 14。\n3. 故障排除：如果连接失败（出现 Configuration Error），通常是因为凭据错误或端口\n/Egress Policy 不匹配 15, 16。\n4. 同步表：选择数据库中的具体表（如 plants），并将其同步为 Foundry 中的数据集 16,\n17。\nC. 连接 REST API（编程接口）\n这是最复杂的连接方式，分为两个主要步骤 18： ● 在 Data Connection 中创建源：配置 API 端点、端口和必要的 Secret（如 Token），并\n确保开启“允许将此源导入代码仓库”的开关 18-20。\n● 在 Code Repositories 中编写代码：\n● 使用 Python 创建一个新的存储库 21。\n● 安装特定的外部转换库 transforms-external-systems 22。\n● 通过 RID（资源标识符） 引用之前创建的 REST API 源 23, 24。\n● 编写逻辑来解析 API 响应，并使用 transform_df 装饰器将结果输出为数据集 24, 25。\n3. 后续步骤与管理\n完成数据连接后，课程还介绍了一些高级管理工具：\n● Data Lineage（数据血缘）：通过此应用可以清晰地看到从外部 Egress Policy 到\nSource，再到 Sync 生成的数据集（或代码转换）的端到端流程 26, 27。\n● 调度（Schedule）与检查（Checks）：可以为同步任务设置运行频率（例如每天更新），并\n添加数据质量检查 27, 28。\n● 最佳实践：课程最后提供了关于保持数据连接高效性和遵循安全规范的技巧 27。\n通过这门课程的学习，用户能够掌握在 Foundry 环境下从零开始构建、调试和管理数据接入\n通道的完整技能 1, 27。",
+    "size": 162150
+  },
+  {
+    "filename": "Palantir Foundry 数据科学实战：临床研究全流程导引.pdf",
+    "pages": 2,
+    "text_length": 1887,
+    "metadata": {
+      "Title": "Palantir Foundry 数据科学实战：临床研究全流程导引",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Speedrun: Data Science Fundamentals (update)”是发布在 learn.palantir.com 上的一门实\n战导向课程，由 Ontologize 团队（前 Palantir 工程师组成）提供 1, 2。\n该课程旨在通过一个完整的**临床研究（Clinical Study）**案例，指导用户如何在 Palantir\nFoundry 中利用数据科学工具链处理从原始数据到交互式分析报告的全流程 1, 2。以下是基\n于来源对该课程内容的详细介绍：\n1. 核心目标与业务场景\n课程的核心目标是让用户熟悉 Foundry 中的数据科学工作流，包括数据预处理、调和（\nReconciliation）、模型分析和结果发布 1。\n● 业务场景：分析临床研究数据，通过患者的人口统计学信息、不良事件（Adverse\nEvents）数据以及患者反馈，来理解与药物消耗相关的风险 2, 3。\n● 多样化数据源：课程涵盖了结构化表格（CSV）和非结构化数据（PDF 文件）的处理 1, 2\n。\n2. 关键技术流程与工具\nA. 数据集成与预处理 (Pipeline Builder)\n用户首先在 Pipeline Builder 中构建数据管道，对数据进行清洗和统一 1, 4。\n● 多源合一：将人口统计数据（DM）、不良事件数据（AE）以及患者反馈媒体集（Media Set\n）导入 4, 5。\n● AIP 与文本提取：利用 AIP (Artificial Intelligence Platform) 从 PDF 格式的患者反馈\n中提取原始文本 1, 6。\n● LLM 情感分析：使用大语言模型（如 GPT-4 或 Gemini 2.0 Flash）对提取的文本进行处\n理，将其转换为结构化数据，包括患者 ID、情感评分和摘要 7, 8。\n● 数据连接 (Joins)：通过左连接（Left Join）将上述结构化后的反馈数据与人口统计和不\n良事件表格合并，形成一个全方位的患者信息资产 9。\nB. 交互式数据分析 (Jupyter Lab)\n在数据准备就绪后，课程引导用户进入 Jupyter Lab 环境进行深入探索 10。\n● 环境优势：在 Foundry 内部使用 Jupyter，既能保留数据科学家熟悉的 Python 开发体\n验，又能直接访问受治理的“组织单一事实来源（Source of Truth）” 10, 11。\n● 可视化：通过安装 matplotlib 等库，编写 Python 代码生成直观的直方图，分析不同治\n疗组（安慰剂组 vs. 治疗组）的年龄分布以及不良事件的发生频率 12, 13。\nC. 构建数据应用 (Streamlit)\n为了将分析结果分享给非技术决策者，课程教授如何创建 Streamlit 应用程序 14。\n● 交互式看板：用户可以构建一个“不良事件年龄分布探索器”，允许其他用户通过下拉菜\n单选择特定的不良事件类型（如焦虑或食欲下降），动态查看相关的年龄分布直方图和\n患者反馈摘要 15, 16。\n● 版本控制与共享：Streamlit 应用依托于代码仓库，支持分支管理，并可以通过链接直接\n分享给拥有权限的同事 17。\n3. 管理与治理：数据血缘 (Data Lineage)\n课程强调了在 Foundry 中进行数据科学工作的独特优势——数据出处（Data Providence） 18\n。 ● 端到端可见性：通过 Data Lineage 应用，用户可以清晰地看到从原始 PDF 和 CSV 到\nPipeline Builder 转换，再到最终 Jupyter 分析和 Streamlit 应用的完整路径 18, 19。\n● 可重复性：这种透明度确保了分析结果是可追溯且可重复的，避免了传统本地数据科\n学流程中常见的“数据丢失”或“过程黑箱”问题 18。\n4. 学习建议与后续\n● 权限要求：参加课程需要具备 Pipeline Builder、Jupyter Workspace、Streamlit 和 AIP\n的访问权限 2, 20。\n● 后续扩展：完成基础流程后，课程鼓励用户尝试在 Jupyter 环境中进一步训练机器学习\n模型，并参考 Foundry 提供的 AIP 示例进行更高级的应用开发 21。\n通过这门课程，用户不仅能学会使用单一工具，更能掌握如何将 AIP、Pipeline Builder 和\nCode Workspaces 协同工作，构建端到端的数据科学解决方案 1, 18。",
+    "size": 166185
+  },
+  {
+    "filename": "Palantir Foundry 数据管道构建实战全指南.pdf",
+    "pages": 2,
+    "text_length": 2107,
+    "metadata": {
+      "Title": "Palantir Foundry 数据管道构建实战全指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Building Your First Pipeline”是发布在 learn.palantir.com 上的\n一门深度实战课程，由 Ontologize 团队（由前 Palantir 工程师组成）提供 1。该课程旨在指导\n用户如何在 Palantir Foundry 中通过核心工作流，从零开始构建、部署并管理一个完整的数据\n生产管道 1。\n以下是基于提供的来源对该课程内容的详细介绍：\n1. 核心概念与管道定义\n课程首先明确了 Foundry 中“管道（Pipeline）”的基础定义：\n● 定义：管道是一系列输入数据集（或单个数据集），通过一系列**转换（Transformations）\n**处理后，生成一个或多个输出数据集的过程 2。\n● 循环特性：输出数据集可以进一步作为下一个管道环节的输入，直到生成能够支撑最\n终业务流的数据集序列 2。\n● 构建目的：管道通常用于清洗原始数据、为数据分析做准备、为本体（Ontology）对象\n类型提供支撑，或作为机器学习模型的输入 3。\n2. 开发环境与准备工作\n● 工具：课程的核心操作是在 Pipeline Builder 应用中完成的，这是一个用于构建数据\n管道的图形化/低代码环境 4, 5。\n● 权限要求：用户需要拥有对应项目的 Editor（编辑） 角色，以便能够添加和管理\nPipeline Builder 构件 6。\n● 建议存储位置：通常在名为 temporary training artifacts 或 tutorial practice artifacts 的\n公共训练项目下创建个人文件夹进行练习 3, 6。\n3. 数据摄取与初始预处理\n课程通过三种不同格式的原始数据（产品、客户、交易数据）演示了摄取流程：\n● 支持格式：包括 CSV、Parquet（一种专为 Spark 引擎优化的列式存储格式）和 JSON 7\n。\n● 数据清洗（Cleaning）：\n● 去除空格（Trim Whitespace）：确保字段名称一致，防止在后续聚合分组时出现错误 8,\n9。\n● 类型转换（Cast）：将字符串类型的字段（如价格 Price 或单位 Units）转换为数值类型\n（如 Double），以便进行数学运算 8, 10, 11。\n● 过滤（Filter）：移除包含空值（Null）或无效数据的行，以维护数据质量 12。\n4. 高级转换与 AI 集成\n课程涵盖了一些复杂的处理技巧：\n● 处理结构化数据（Structs）：教授如何解析嵌套的 JSON 数据，使用 Flatten struct（展\n平结构体） 和 Concatenate（拼接） 功能将复杂的地址字段转换为易读的字符串 13,\n14, 15。\n● AIP 助手辅助开发：\n● 自动生成转换逻辑：用户可以利用 Foundry AI 助手 通过自然语言生成复杂的转换逻\n辑，例如将具有特殊格式的字符串日期转换为标准的时间戳（Timestamp） 16, 11。\n● 提示词构建：AI 助手可以根据用户提供的示例值自动推断并生成日期格式字符串，极\n大简化了开发难度 16。 5. 数据集成与逻辑优化\n在单表清洗完成后，课程进入数据整合阶段：\n● 多表连接（Joins）：通过 Left Join（左连接） 将交易、产品和客户数据合并，构建全局视\n图 17, 18。\n● 故障排除（Troubleshooting）：教授如何利用 View Stats（查看统计数据） 功能识别“连\n接爆炸”或数据重复（Multiplicity）问题，并据此调整连接键（如将 product_id 更改为更\n精确的 product_variation_id） 19, 20, 21。\n● 数据聚合（Aggregations）：执行类似 SQL 中 Group By 的操作，通过计算“单价 × 数\n量”得到收入，并按客户维度汇总生成**客户终生价值（Customer Lifetime Value）**数\n据集 22, 23。\n6. 部署、监控与最佳实践\n● 部署（Deploy）：在 Pipeline Builder 中，逻辑编写完成后必须点击“Deploy”才能在\nFoundry 中实际运行并生成物化数据集 24。\n● 作业追踪（Job Tracker）：课程引导用户通过 Job Tracker 监控后台 Spark 作业的执行\n进度和成功状态 25。\n● 管道分段（Pipeline Segmentation）：作为最佳实践，建议将大型管道拆分为多个逻辑\n段（如原始层 Raw、清洗层 Clean、富化层 Enriched、本体层 Ontology），以便于维护和\n协作 26, 27。\n● 数据血缘（Data Lineage）：通过血缘应用可视化展示从原始数据到最终分析应用的全\n过程，确保数据的可追溯性 27。\n通过本教程，用户能够掌握在 Foundry 平台中构建高性能、受治理且可扩展的工业级数据管\n道所需的端到端技能 28。",
+    "size": 169891
+  },
+  {
+    "filename": "Palantir Foundry 数据管道构建实战指南 (1).pdf",
+    "pages": 2,
+    "text_length": 2107,
+    "metadata": {
+      "Title": "Palantir Foundry 数据管道构建实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Building Your First Pipeline”是发布在 learn.palantir.com 上的\n一门深度实战课程，由 Ontologize 团队（由前 Palantir 工程师组成）提供 1。该课程旨在指导\n用户如何在 Palantir Foundry 中通过核心工作流，从零开始构建、部署并管理一个完整的数据\n生产管道 1。\n以下是基于提供的来源对该课程内容的详细介绍：\n1. 核心概念与管道定义\n课程首先明确了 Foundry 中“管道（Pipeline）”的基础定义：\n● 定义：管道是一系列输入数据集（或单个数据集），通过一系列**转换（Transformations）\n**处理后，生成一个或多个输出数据集的过程 2。\n● 循环特性：输出数据集可以进一步作为下一个管道环节的输入，直到生成能够支撑最\n终业务流的数据集序列 2。\n● 构建目的：管道通常用于清洗原始数据、为数据分析做准备、为本体（Ontology）对象\n类型提供支撑，或作为机器学习模型的输入 3。\n2. 开发环境与准备工作\n● 工具：课程的核心操作是在 Pipeline Builder 应用中完成的，这是一个用于构建数据\n管道的图形化/低代码环境 4, 5。\n● 权限要求：用户需要拥有对应项目的 Editor（编辑） 角色，以便能够添加和管理\nPipeline Builder 构件 6。\n● 建议存储位置：通常在名为 temporary training artifacts 或 tutorial practice artifacts 的\n公共训练项目下创建个人文件夹进行练习 3, 6。\n3. 数据摄取与初始预处理\n课程通过三种不同格式的原始数据（产品、客户、交易数据）演示了摄取流程：\n● 支持格式：包括 CSV、Parquet（一种专为 Spark 引擎优化的列式存储格式）和 JSON 7\n。\n● 数据清洗（Cleaning）：\n● 去除空格（Trim Whitespace）：确保字段名称一致，防止在后续聚合分组时出现错误 8,\n9。\n● 类型转换（Cast）：将字符串类型的字段（如价格 Price 或单位 Units）转换为数值类型\n（如 Double），以便进行数学运算 8, 10, 11。\n● 过滤（Filter）：移除包含空值（Null）或无效数据的行，以维护数据质量 12。\n4. 高级转换与 AI 集成\n课程涵盖了一些复杂的处理技巧：\n● 处理结构化数据（Structs）：教授如何解析嵌套的 JSON 数据，使用 Flatten struct（展\n平结构体） 和 Concatenate（拼接） 功能将复杂的地址字段转换为易读的字符串 13,\n14, 15。\n● AIP 助手辅助开发：\n● 自动生成转换逻辑：用户可以利用 Foundry AI 助手 通过自然语言生成复杂的转换逻\n辑，例如将具有特殊格式的字符串日期转换为标准的时间戳（Timestamp） 16, 11。\n● 提示词构建：AI 助手可以根据用户提供的示例值自动推断并生成日期格式字符串，极\n大简化了开发难度 16。 5. 数据集成与逻辑优化\n在单表清洗完成后，课程进入数据整合阶段：\n● 多表连接（Joins）：通过 Left Join（左连接） 将交易、产品和客户数据合并，构建全局视\n图 17, 18。\n● 故障排除（Troubleshooting）：教授如何利用 View Stats（查看统计数据） 功能识别“连\n接爆炸”或数据重复（Multiplicity）问题，并据此调整连接键（如将 product_id 更改为更\n精确的 product_variation_id） 19, 20, 21。\n● 数据聚合（Aggregations）：执行类似 SQL 中 Group By 的操作，通过计算“单价 × 数\n量”得到收入，并按客户维度汇总生成**客户终生价值（Customer Lifetime Value）**数\n据集 22, 23。\n6. 部署、监控与最佳实践\n● 部署（Deploy）：在 Pipeline Builder 中，逻辑编写完成后必须点击“Deploy”才能在\nFoundry 中实际运行并生成物化数据集 24。\n● 作业追踪（Job Tracker）：课程引导用户通过 Job Tracker 监控后台 Spark 作业的执行\n进度和成功状态 25。\n● 管道分段（Pipeline Segmentation）：作为最佳实践，建议将大型管道拆分为多个逻辑\n段（如原始层 Raw、清洗层 Clean、富化层 Enriched、本体层 Ontology），以便于维护和\n协作 26, 27。\n● 数据血缘（Data Lineage）：通过血缘应用可视化展示从原始数据到最终分析应用的全\n过程，确保数据的可追溯性 27。\n通过本教程，用户能够掌握在 Foundry 平台中构建高性能、受治理且可扩展的工业级数据管\n道所需的端到端技能 28。",
+    "size": 169888
+  },
+  {
+    "filename": "Palantir Foundry 数据管道构建实战指南.pdf",
+    "pages": 2,
+    "text_length": 1769,
+    "metadata": {
+      "Title": "Palantir Foundry 数据管道构建实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Building Your First Pipeline”是发布在 learn.palantir.com 上\n的一门深度实战课程，由前 Palantir 工程师组成的 Ontologize 团队制作 1, 2。该课程的核心\n目标是指导用户在 Palantir Foundry 中利用 Pipeline Builder 应用，从零开始构建一个完整\n的数据生产管道 3, 4。\n以下是基于来源对该课程内容的详细介绍：\n1. 核心概念与管道定义\n课程首先明确了 Foundry 中“管道（Pipeline）”的定义：它是一系列输入数据集通过一系列转换\n（Transformations）最终生成输出数据集的过程 5。\n● 构建目的：管道通常是为了使原始数据（Raw Data）变得可用，例如为分析做准备、支\n撑本体（Ontology）对象类型，或作为机器学习模型的输入 5, 6。\n● 开发环境：主要在 Pipeline Builder 中进行，这是一个低代码/图形化的开发环境 3, 4。\n2. 数据准备与清洗流程 (Preprocessing)\n课程通过三种不同格式的原始数据（产品 CSV/Parquet、客户结构化数据、交易 JSON）演示了\n数据清洗的最佳实践：\n● 基础转换：包括修剪字符串空格（Trim Whitespace）以确保聚合准确，以及将数据类型\n（如价格）从字符串转换为双精度浮点型（Double） 7-10。\n● 复杂结构处理：教授如何处理“结构体（Struct）”数据 11。例如，将嵌套的 JSON 地址信\n息展平（Flatten），解析后重新拼接成易读的街道/城市/州字符串，并删除冗余的中间列\n12-16。\n● AI 辅助功能：展示了如何利用 Foundry AI 助手 自动生成复杂的日期转换格式字符串\n（Timestamp Casting），减少了查阅技术文档的负担 17-20。\n3. 数据集成与逻辑优化 (Joins & Aggregations)\n在清洗完各分支数据后，课程进入了数据整合阶段：\n● 多表连接 (Joins)：将交易记录、产品信息和客户资料通过左连接（Left Join）合并 21,\n22。\n● 故障排除与调试：课程特别强调了如何使用 View Stats（查看统计数据） 功能来识别数\n据重复（Multiplicity）问题 23, 24。例如，当发现 Join 导致行数非预期增加时，引导用户\n将连接键从 product_id 优化为更精确的 product_variation_id 24, 25。\n● 高级聚合：通过数学运算（单价 × 数量）计算收入（Revenue），并按客户进行分组聚合，\n最终生成客户终生价值 (Customer Lifetime Value) 数据集 26, 27。\n4. 部署、监控与最佳实践\n课程不仅涵盖了逻辑编写，还包括了管道的运维管理：\n● 部署 (Deployment)：逻辑编写完成后，必须通过“部署”操作才能在 Foundry 中物化（\nMaterialize）出实际的数据集 28, 29。\n● 作业追踪 (Job Tracker)：介绍如何使用 Job Tracker 查看后台 Spark 作业的执行进度\n和详细细节 29。\n● 管道分段 (Segmentation)：讲解了将大型管道拆分为多个逻辑段（如原始层、清洗\n层、富化层、本体层）的最佳实践，以便于维护和复用 30, 31。\n● 数据血缘 (Data Lineage)：通过血缘视图提供管道的端到端可视化，确保数据的来源\n和去向清晰透明 31, 32。 5. 学习建议\n● 权限准备：用户需要拥有 Foundry 项目的“编辑（Editor）”权限，并能访问 Pipeline\nBuilder 应用 33。\n● 实验环境：建议在“临时训练工件（Temporary Training Artifacts）”或特定的教学文件夹\n中进行操作，以保持环境整洁 4, 6, 33。\n通过学习该课程，用户不仅能掌握 Pipeline Builder 的功能，还能学会如何构建一个高性能、\n受治理且可扩展的工业级数据管道 32。",
+    "size": 163518
+  },
+  {
+    "filename": "Palantir Foundry 数据连接全栈指南.pdf",
+    "pages": 2,
+    "text_length": 1913,
+    "metadata": {
+      "Title": "Palantir Foundry 数据连接全栈指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Creating Your First Data Connection”（深入解析：创建你的第一个数据连接）\n是一门发布在 learn.palantir.com 上的实战进阶课程，由 Ontologize 团队（由前 Palantir 工程\n师组成）提供教学 1, 2。\n该课程被视为用户在 Palantir Foundry 中获取价值的第一步，因为它教授如何将数据从外部\n系统引入平台 1。以下是根据来源对该课程标题及其核心内容的详细解释：\n1. 核心工具：Data Connection 应用\nData Connection 是 Foundry 中专门用于将外部源系统的数据同步到平台内部，或者将清洗\n后的数据导回到源系统的核心工具 3。\n● 功能定位：每当涉及数据在 Foundry 与外部系统（如云存储、数据库或 API）之间移动\n时，所有的配置都在此应用中完成 3, 4。\n● 数据资产化：该工具最终将外部数据转化为 Foundry 中的原始数据集（Raw Data Sets\n），供后续的 Pipeline Builder 或分析工具使用 5。\n2. 两个关键概念：源 (Sources) 与 同步 (Syncs)\n课程强调了理解这两者之间关系的必要性，它们是构建连接的基础架构：\n● 源 (Sources)：存储如何连接到外部系统的指令 6, 7。它包含 URL、端口号以及安全凭\n据（如 API 密钥、机密令牌等）6, 7。源具备内置的机密管理器（Secrets Manager），确\n保敏感信息被加密存储 6。\n● 同步 (Syncs)：存储如何从特定源交换数据的指令 4, 6。例如，从一个源中提取哪个特\n定的表或文件夹 4。\n● 关系：一个“源”可以拥有多个“同步”，但一个“同步”只能属于一个“源”，形成了一对多的\n关系 4。\n3. 连接方式：直接连接 vs. 代理 (Agents)\n课程详细解释了根据网络环境选择连接技术的标准：\n● 直接连接 (Direct Connection)：用于连接可通过互联网访问的数据源，如 REST API\n或云存储 8, 9。其优势在于无需维护额外的软件，具备出色的运行时间和性能 9。\n● 代理 (Agents)：当数据源位于公司内部网络或防火墙后，无法通过公网访问时，需要\n部署代理软件 8, 10。代理通过单向加密连接与 Foundry 通信，确保企业内网的安全姿\n态 7, 8。\n4. 数据保护：出口策略 (Egress Policies)\n由于连接外部系统涉及信息安全，Foundry 默认锁定所有出站请求 11。\n● 出口策略 (Egress Policies)：这是允许 Foundry 向外部数据库或 API 发出请求的防火\n墙许可 4, 11。\n● 权限要求：配置此类策略通常需要具备**信息安全官（Information Security Officer）**角\n色的 elevated 权限 12, 13。\n5. 三大核心实战场景\n该课程之所以称为“Deep Dive”，是因为它涵盖了工业界最常见的三种数据源类型：\n● 文件存储 (AWS S3)：学习如何连接 S3 桶并摄取 .csv 或其他格式的文件，此流程同样\n适用于 Azure Blob 或 Google Cloud 存储 9, 14。 ● 关系型数据库 (PostgreSQL)：演示如何通过 JDBC 协议连接数据库 15, 16。在底层，\n这实际上是通过 SQL 查询来拉取数据的，对于熟悉 SQL 的非数据工程师也非常友好\n17。\n● REST API：展示如何通过**代码存储库（Code Repositories）**以编程方式调用 API 接\n口，并使用 Python 转换逻辑处理返回的 JSON 数据 16, 18, 19。\n6. 数据溯源与管理\n● 数据血缘 (Data Lineage)：课程展示了摄取后的数据集在 Data Lineage 应用中的样子\n20, 21。用户可以清晰地看到数据来源的源、同步以及背后允许其通信的出口策略，实\n现了端到端的数据追溯 20, 21。\n● 自动化调度：用户还可以为这些同步任务设置计划任务（Schedules），例如每天凌晨自\n动抓取最新数据 20, 22。\n总结来说，这个标题代表了一次从安全配置到数据落地的全流程实践。它不仅教导用户如何操\n作界面，更深入解析了如何通过源管理、安全策略配置和代码集成，在 Foundry 中建立起稳\n健、合规且自动化的企业级数据摄取链路 3, 22, 23。",
+    "size": 167122
+  },
+  {
+    "filename": "Palantir Foundry 数据集成实战指南.pdf",
+    "pages": 2,
+    "text_length": 1600,
+    "metadata": {
+      "Title": "Palantir Foundry 数据集成实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Creating Your First Data Connection (update)” 是发布在 learn.palantir.com\n上的一个深度实战教程，由 Ontologize 团队（由前 Palantir 工程师组成）提供 1。\n该标题代表了 Palantir Foundry 平台中**数据集成（Data Integration）**的核心环节。课程通过\n更新后的内容，指导用户如何将各种外部系统的数据安全、受控地引入 Foundry 1, 2。\n以下是基于来源对该标题所涵盖内容的详细解释：\n1. 核心定义：连接外部世界的“桥梁”\n在 Foundry 中，“Data Connection” 不仅仅是简单的数据下载，它是一个受治理的架构。该标\n题涉及两个核心概念：\n● Source（源）：存储连接外部系统的指令，包括 URL、端口号和安全凭据（如 API 密钥、\nOAuth 令牌等） 2, 3。它充当了存储敏感信息的“保险柜” 3。\n● Sync（同步）：定义从特定 Source 中提取哪些具体数据（如特定的表、文件夹或文件）\n的指令 3, 4。Source 与 Sync 之间是一对多的关系 4。\n2. 三大核心业务场景\n该教程被称为“深度潜入（Deep Dive）”，是因为它涵盖了企业中最常见的三种数据源类型：\n● 文件系统 (AWS S3)：学习如何连接到云端对象存储，处理 CSV 等文件，并利用\nFoundry 的模式检测（Schema Detection）功能自动将其转化为表格数据 5-7。\n● 关系型数据库 (PostgreSQL)：演示如何通过 JDBC 协议连接数据库，配置 SSL 证书，\n并执行 SQL 查询来提取数据 8-10。\n● REST API：这是课程中较高级的部分，教授如何通过编写 Python 代码来调用 API 接\n口，并解析返回的 JSON 响应 11-13。\n3. 安全与治理：Egress 策略\n标题中的“深度”还体现在对安全架构的强调。由于 Foundry 默认是封闭的，任何向外的网络\n请求都必须经过**网络流出策略（Network Egress Policy）**的许可 14, 15。\n● 这需要信息安全官（ISO）的批准，以确保流量仅流向预期的安全地址 16-18。\n● 这种机制确保了数据的可追溯性（Data Lineage），在血缘视图中可以直接查看到数据\n是由哪个 Egress 策略许可并从哪个源头引入的 8, 19。\n4. 标题中的 “(update)” 含义\n根据来源，该教程进行了重要更新，特别是在处理 REST API 的方式上：\n● 源基外部转换（Source-based external transforms）：这是目前推荐的新方法 20。与\n旧方法（手动将 Egress 策略和凭据导入代码库）不同，新方法允许直接在代码中引用\n“Source”对象 21, 22。\n● 优势：这种方式更加简洁且易于维护，因为所有的连接细节和加密信息都集中在数据连\n接应用中管理，而代码只需负责逻辑处理 21, 23。\n5. 学习该课程的价值\n完成这个“Deep Dive”后，用户不仅能学会如何搬运数据，还能理解如何构建**组织单一事实\n来源（Single Source of Truth）**的基础 9, 24。\n● 自动化：通过设置计划任务（Schedule），可以实现数据的定期自动更新 19, 24。\n● 低代码友好：对于数据库连接，其本质是简单的 SQL 查询，这使得非数据工程师也能\n参与到数据集成工作中 9。 总结来说，这个标题代表了一门关于如何在保障安全合规的前提下，利用最新技术手段（如源\n基转换）将企业孤岛数据接入 Foundry 平台的权威指南 1, 14, 20。",
+    "size": 159489
+  },
+  {
+    "filename": "Palantir Foundry 本体函数实战速成指南.pdf",
+    "pages": 2,
+    "text_length": 2067,
+    "metadata": {
+      "Title": "Palantir Foundry 本体函数实战速成指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Speedrun: Your First Ontology Function”是 learn.palantir.com 上的一门\n进阶实战课程，由 Ontologize 团队提供。该课程旨在指导用户如何通过编写 TypeScript 函数\n（Functions） 来扩展 Palantir Foundry 本体（Ontology）的功能，并将这些逻辑集成到\nWorkshop 应用程序中 1-3。\n以下是根据来源对该课程内容的详细解释：\n1. 核心目标与业务场景\n● 业务背景：课程模拟了一个医疗财务分析场景，重点在于研究医院如何将其服务转化为\n实际收入 2。\n● 核心指标：计算 DSO（Day Sales Outstanding，应收账款周转天数），这是一个衡量诊\n所收回收入速度的关键指标 4。\n● 最终成果：构建一个“诊所财务追踪（Clinic Finance Tracker）”应用程序，该程序包含\n由函数驱动的指标卡、动态图表和操作按钮 2, 5。\n2. 开发环境与资源准备\n● 数据准备：通过 Marketplace 安装名为 “Speedrun: Your First Ontology Function” 的\n产品包，其中包含“诊所（Clinic）”和“财务（Financial）”两个核心对象类型 6, 7。\n● 工具选择：主要在 Code Repositories（代码存储库） 中进行开发。用户需要创建一\n个类型为 “Functions” 的存储库，并选择 TypeScript 作为开发语言 3。\n● 本体导入：在编写代码前，必须将本体中的对象类型导入到存储库的资源导入（\nResource Imports）中，以便在代码中引用它们 7, 8。\n3. 课程涵盖的四种函数类型\n课程通过四个具体的函数示例，展示了函数在 Foundry 中的不同应用模式：\nA. 基础指标计算函数 (Metric Calculation)\n● 逻辑：编写 calculateDaysSalesOutstanding 函数。它使用 groupBy 方法按月聚合账单\n和收入数据，并通过“倒序计数”逻辑计算 DSO 值 4, 9, 10。\n● Workshop 应用：在 Workshop 中创建一个函数驱动的数值变量，用于填充指标卡（\nMetric Card），实时显示所有诊所或特定诊所的 DSO（示例值为 40.5）11, 12。\nB. 函数驱动的衍生列 (Function-backed Column)\n● 逻辑：编写 functionColumnDaysSalesOutstanding 函数。该函数创建一个映射（Map），\n将每个诊所与其计算出的 DSO 值关联起来 13, 14。\n● Workshop 应用：在 Workshop 的对象表格（Object Table）中添加一个衍生列。用户可\n以为该列设置数值格式（显示单位为“天”）和条件格式（例如：DSO > 40 显示为红色危\n险状态）15, 16。\nC. 动态图表聚合函数 (Function-backed Chart)\n● 逻辑：编写 calculateDaysSalesOutstandingMonthOverMonth 函数。它计算月度 DSO\n的变化，并返回一个聚合结果 17, 18。\n● Workshop 应用：在 Workshop 中配置 XY 图表，将其数据源从“对象集”更改为“函数”。\n该图表能根据用户在表格中选择的不同诊所实时更新趋势 19。 D. 函数驱动的操作逻辑 (Ontology Edit Function)\n● 逻辑：使用 @OntologyEditFunction 装饰器编写函数。该函数不仅计算数据，还能修\n改本体对象。逻辑包括：切换诊所的“复核中（Under Review）”状态，并自动设定一个\nDSO 改进目标（通常为当前值的 70%-95%） 20, 21。\n● Workshop 应用：在 Ontology Manager 中将该函数包装成一个操作（Action），然后\n在 Workshop 中通过按钮触发，直接修改底层数据 5, 22。\n4. 关键技术概念\n● 装饰器（Decorators）：使用 @Function 暴露普通读取逻辑，使用\n@OntologyEditFunction 暴露数据修改逻辑 4, 20。\n● 异步处理：利用 TypeScript 的 Promise（如 Promise.all）并行处理多个诊所的复杂计算\n，以提高应用性能 4, 14。\n● 实时预览与调试：在代码存储库中使用 Live Preview 功能，在不发布代码的情况下输\n入参数并查看函数运行结果，确保逻辑正确 11, 14, 21。\n通过本课程，用户能够掌握如何超越标准的 UI 配置，利用代码的力量在 Foundry 中实现复杂\n的业务逻辑和高度定制化的用户交互 1, 23。",
+    "size": 156356
+  },
+  {
+    "filename": "Palantir Foundry 本体建模实战指南.pdf",
+    "pages": 2,
+    "text_length": 1635,
+    "metadata": {
+      "Title": "Palantir Foundry 本体建模实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Your first Ontology”是 learn.palantir.com 上的一门核心实战课\n程，由 Ontologize 团队提供 1。该课程旨在指导用户理解 Palantir Foundry **本体（Ontology）\n**的概念，并亲手构建和操作一个完整的本体模型 1。\n以下是根据资料对该课程内容的详细介绍：\n1. 本体（Ontology）的核心概念\n本体是 Foundry 组织结构化数据的核心，它将原始数据集（Datasets）转化为易于理解的业务\n分类，称为对象类型（Object Types） 2, 3。\n● 映射关系：一个数据集对应一个对象类型；数据集中的一行对应一个对象实例（\nInstance）；数据集中的一列对应一个对象属性（Property） 3。\n● 关键标识：\n● 主键（Primary Key）：每个对象必须有一个唯一且不可重复的主键（如患者 ID），用于\n区分不同实例 3, 4。\n● 标题键（Title Key）：用于在界面上以人类可读的方式显示对象名称（如患者姓名），通\n常不需要像主键那样必须是哈希字符串 3, 4。\n● 作用：它是构建上层应用程序（如 Workshop）和工作流的“数字孪生”基础 3。\n2. 业务场景：患者旅程（Patient Journey）\n课程围绕患者医疗旅程展开，涉及以下核心实体：\n● 患者（Patients）：由患者数据集支持 4。\n● 手术（Surgeries）：患者经历的治疗实例 4。\n● 治疗类型（Treatment Types）：如“膝关节手术”或“髋关节置换”等通用类别 4, 5。\n● 患者预后（Patient Outcomes）：记录手术后的恢复情况和反馈 4, 6。\n3. 构建流程与操作工具\nA. 准备与安装\n用户需要通过 Marketplace（Foundry 的资源商店）安装预配置的“Deep Dive: Creating Your\nFirst Ontology”产品包，其中包含 1 个管道和 4 个原始数据集 2, 7。\nB. 创建对象类型\n课程演示了两种创建对象的方式：\n1. 通过本体管理器（Ontology Manager）：这是最常用的方法，用于配置元数据、主键、\n标题键以及权限 8, 9。同时，可以为对象生成操作类型（Action Types），允许特定用户\n创建、修改或删除对象实例 9。\n2. 通过管道构建器（Pipeline Builder）：在数据处理完成后，可以直接在 Pipeline Builder\n的输出端将其定义为“新对象类型”并部署 6, 10。\nC. 建立链接（Links）\n链接用于反映现实世界中实体间的复杂关系，课程涵盖了三种类型：\n● 一对多（1:Many）：一名患者可以经历多次手术 11, 12。\n● 一对一（1:1）：一次手术仅对应一个唯一的预后结果 5, 13。\n● 多对多（Many:Many）：多名患者可以接受同一种治疗类型，且一种治疗类型可应用于\n多名患者 5, 13。**注意：多对多链接必须由一个连接表（Join Table）**支持 14。 4. 验证与探索工具\n构建完成后，课程引导用户使用工具验证本体的准确性：\n● 对象浏览器（Object Explorer）：\n● 用户可以搜索并筛选特定对象（例如筛选患有“肥胖症”的患者） 15, 16。\n● 路径追踪：可以从患者跳转到其关联的手术，再跳转到预后结果，从而快速获取洞察\n（例如：患有肥胖症的手术患者通常在 6 周内康复） 16, 17。\n● 数据血缘（Data Lineage）：\n● 可视化追踪数据从原始源头到处理步骤，再到最终本体对象及其链接关系的完整路径\n17, 18。\n通过本课程，用户能够掌握如何将散乱的数据集转化为具备关联逻辑、可直接用于业务决策\n的本体资产 18, 19。",
+    "size": 149874
+  },
+  {
+    "filename": "Palantir Foundry 自动化报告构建指南.pdf",
+    "pages": 2,
+    "text_length": 1730,
+    "metadata": {
+      "Title": "Palantir Foundry 自动化报告构建指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us: Sending your Contour Dashboard on a Schedule”是由 Ontologize 团队\n（由前 Palantir 工程师组成）提供的实战教程。该课程主要教授如何利用 Palantir Foundry 中的\nNotepad（记事本） 应用，将 Contour 分析看板转化为定期发送的电子邮件报告（包含 PDF 附\n件和访问链接） 1。\n以下是根据来源对该工作流的详细介绍：\n1. 核心媒介：使用 Notepad 构建报告\n虽然分析是在 Contour 中完成的，但为了实现“定时发送”，需要使用 Notepad 作为报告的载\n体 1。\n● 创建文档：首先在项目中创建一个新的 Notepad 文档，并赋予其标题（如“销售报告”） 1\n。\n● 动态内容：Notepad 支持富文本编辑，可以使用“/”斜杠命令插入动态日期（Current\nDate） 2。用户可以选择让日期在每次报告生成时自动更新，并设定统一的时区（如\nUTC）以确保全球团队看到的时间一致 2。\n● 资源链接：通过“/Foundry resource link”功能，可以在报告中直接嵌入指向原始\nContour 分析环境的链接，方便管理层点击查看实时交互数据 3。\n2. 将 Contour 视觉效果集成到报告中\n教程介绍了两种将 Contour 图表引入 Notepad 的方法 3, 4：\n● 方法一：Notepad 内搜索：在 Notepad 中使用斜杠命令插入“Contour Chart”，选择对应\n的分析文件和特定的路径（Path）及板（Board） 3, 4。\n● 方法二：复制粘贴：直接打开 Contour 看板，找到需要的图表并选择“Copy for\nNotepad（复制到记事本）”，然后粘贴到文档中 4。\n● 参数覆盖：如果 Contour 分析设置了参数（如特定的市场或时间范围），在 Notepad 中\n可以针对每个图表进行参数覆盖，确保报告展示的是特定维度的过滤结果 4。\n3. 报告样式与布局优化\n为了让报告更具专业感，教程涵盖了高级排版技巧：\n● 多列布局：通过添加多列结构，可以将不同的关键指标（如总销售额、交付风险等）并\n排展示，节省空间并提升可读性 3, 5。\n● 页面设置：将页面更改为**横向（Landscape）**模式，并调整 A4 等页面尺寸，以适应更\n宽的图表展示 5。\n● 调整大小：Notepad 允许手动拉伸和缩放嵌入的图表，使其视觉效果优于原始的\nContour 看板 5。\n4. 自动化计划与发送设置\n这是本教程的核心环节，通过以下步骤实现自动化 6-8：\n● 发布版本（Release）：在设置自动化之前，必须先“发布”一个正式版本。这会创建一个\n受认可的文档快照，作为后续自动发送的基础 6, 7。\n● 添加自动化（Add Automation）：\n● 设置触发器：选择基于时间的条件（Time-based condition），例如设置为“每周一上午\n8:00 (UTC)”运行 7。\n● 定义动作：设置效果为“发送通知（Apply notification）” 7。\n● 配置电子邮件内容：\n● 收件人：可以指定特定的用户组（如销售管理团队） 7。 ● 内容与附件：定义邮件主题、正文消息，并确保勾选附加 PDF 文件（即 Notepad 文档\n的静态打印版） 7, 8。\n● 存储与管理：完成设置后，Foundry 会在项目中生成一个专门的“自动化构件（\nAutomation artifact）”，用户可以随时对其进行编辑、暂停或设置过期时间 8。\n5. 注意事项与局限性\n● 交互性损失：PDF 附件是静态的，用户无法像在原始看板中那样点击图表元素进行联\n动过滤 6。\n● 互补性：由于 PDF 报告中附带了原始 Contour 链接，管理层既能快速查看静态结论，\n也能随时深入生产环境进行交互式探究 6, 7。\n通过这一流程，数据分析师可以将繁琐的日常汇报工作自动化，确保决策者能够定期在邮箱\n中收到结构清晰、受治理且可追溯的业务洞察报告 8, 9。",
+    "size": 157940
+  },
+  {
+    "filename": "Palantir智能体工作流构建实战指南.pdf",
+    "pages": 1,
+    "text_length": 1291,
+    "metadata": {
+      "Title": "Palantir智能体工作流构建实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Speedrun: Your First Agentic AIP Workflow”是 learn.palantir.com 平台上\n的一门实战进阶课程。该课程的核心目标是指导用户在 Palantir Foundry 中构建一个智能体（\nAgent），用于自动评估患者是否符合临床试验的入组条件 1, 2。\n以下是基于来源对该标题及课程内容的详细解释：\n1. 核心定义：什么是“智能体工作流”？\n与基础的 AI 问答不同，这里的“Agentic（代理/智能体）”特指 AI 不仅仅是回答问题，还能根据\n逻辑推理直接在系统中执行操作。\n● 不仅仅是聊天：该工作流不使用交互式聊天界面（如 AIP Agent Studio），而是通过 AIP\nLogic（无代码函数编辑器）构建 3, 4。\n● 自动执行操作：智能体会评估数据并触发 Ontology Action（本体操作），直接修改底\n层数据的状态（例如：将患者标记为“适合”或“不适合”） 5, 6。\n2. 业务背景：临床试验招募\n课程模拟了医疗领域的真实挑战：\n● 非结构化数据处理：临床试验的入组/排除标准通常存储在复杂的 PDF 协议中 7, 8。\n● 多源数据整合：智能体需要同时读取“临床试验协议（PDF）”和“患者病史（本体对象）” 9,\n10。\n● 决策自动化：利用大语言模型（LLM）的推理能力，对比患者属性与试验标准，给出入组\n建议及理由 11, 12。\n3. 关键技术环节：评估与自动化\n该标题中的“Speedrun”意味着用户将快速走通以下专业开发链路：\n● AIP Logic 构建：定义输入（患者对象、试验对象），编写提示词（Prompt），并设定输出\n结构（Struct），确保 AI 返回的 JSON 格式可被系统解析 12, 13。\n● 本体编辑集成（Ontology Edit）：将 LLM 的推理结果与“修改资格决定”的操作绑定，使\n智能体能够更新本体数据 5, 14。\n● 评估套件（Evaluation Suite）：这是生产环境中最关键的一步。通过建立测试用例（预\n设已知结果的患者数据）来衡量智能体的准确率，并对比不同模型（如 GPT-4 与 o3）的\n表现，从而建立团队信任 15-17。\n● 自动化触发（Automate）：利用 Foundry 的 Automate 工具设置监听器。一旦有新患者\n注册，系统会自动触发该智能体工作流进行实时评估 18-20。\n4. 人机协作（Human-AI Teaming）理念\n该工作流强调了“人机协同”的模式：\n● 智能体负责处理海量的初步筛选工作，而人类专家则负责验证决策，并对智能体无法\n确定的“边缘案例（Edge Cases）”进行人工审核 3, 21。\n总结来说，这个标题代表了一次完整的闭环 AI 开发实践。它不仅教你如何让 AI “思考”，更教\n你如何通过 AIP Logic、评估套件和自动化工具，将 AI 转化为一个受治理的、能够直接推动业\n务流程（如患者入组筛选）的数字员工 22, 23。",
+    "size": 143795
+  },
+  {
+    "filename": "Quiver 本体数据分析实战指南.pdf",
+    "pages": 2,
+    "text_length": 1624,
+    "metadata": {
+      "Title": "Quiver 本体数据分析实战指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Build with Us | Deep Dive: Data Analysis in Quiver”是发布在 learn.palantir.com 上的一门\n深度实战课程，由 Ontologize 团队制作 1。该课程的核心目标是教授用户如何使用 Quiver（\nPalantir Foundry 中针对本体进行分析的主要工具）执行无代码转换、可视化对象数据并创建\n交互式分析看板 1, 2。\n以下是根据来源对该课程内容的详细介绍：\n1. 核心定位与业务场景\n● 工具定位：Quiver 是 Foundry 中用于本体（Ontology）分析的首选工具 1。\n● 业务背景：用户扮演 Titanium Works Manufacturing 公司的数据分析师，目标是分析\n设备和零件数据，以实现性能监控和决策支持 2。\n● 准备工作：课程要求通过 Marketplace 安装名为“Deep Dive Data Analysis in Quiver”\n的产品，其中包含“设备（Equipment）”和“零件（Parts）”对象类型 3, 4。\n2. Quiver 的基础架构\n课程首先介绍了 Quiver 的基本操作单元和视图：\n● 卡片（Cards）：Quiver 的构建块。每张卡片执行特定操作（输入/输出），并拥有全局 ID\n（如 $A）以便在公式中引用 5, 6。\n● 画布视图（Canvas View）：用于布局和展示分析结果的策划视图，支持像浏览器标签页\n一样的多画布操作 7。\n● 图表视图（Graph View）：展示分析逻辑的全景流向图，方便追踪数据的来源和转换过\n程 7, 8。\n3. 数据准备与转换流程 (Data Preparation)\n课程演示了如何在不编写代码的情况下处理本体数据：\n● 对象集成（Joins）：利用 转换表（Transform Tables） 将“设备”和“零件”对象集进行左连\n接（Left Join） 9, 10。注意：转换表的操作上限通常为 50,000 条记录 10。\n● 数据清洗：\n● 使用 Find and Replace 移除字符串中的前缀（如将 p- 移除以提取数值） 11。\n● 使用 Cast 将清洗后的字符串转换为数字类型，以便进行计算 8, 11。\n● 交互式参数（Parameters）：创建参数化过滤器（如工厂选择下拉菜单），使不同用户在\n查看看板时能动态筛选数据而不会相互干扰 12, 13。\n4. 高级分析与逻辑派生\n● 聚合操作（Group By）：按设备 ID 和名称进行分组，并对数组进行聚合计算（如计算平\n均纯度） 14, 15。\n● 公式计算：通过 Numeric Formula 编写逻辑，例如用“实际产量 / 设备产能”来计算“实\n际产出百分比” 16。\n● 视觉函数（Visual Functions）：这是课程的高级部分，教授如何将复杂的分析逻辑封装\n成一个可复用的函数 17。这样，同事们可以直接调用该函数对不同的对象集执行相同\n的分析，而无需重新构建逻辑 17, 18。\n5. 可视化与看板策划 (Visualizations & Dashboards)\n课程涵盖了多种图表的创建与应用：\n● 标准图表：包括柱状图、散点图等 19, 20。 ● Vega 图表（Vega Plot）：对于内置图表无法满足的复杂需求，课程介绍了如何使用\nVega-Lite 语法 创建高级可视化（如箱线图） 21, 22。\n● 看板发布：\n● 将选定的卡片“添加到看板”，并添加标题、注释和交互控件 22, 23。\n● 互操作性：分析结果可以复制到 Notepad 生成报告，或嵌入到 Workshop 应用程序中\n24, 25。\n通过学习该课程，用户能够掌握在 Foundry 平台中从本体对象出发，构建一套完整、可复用且\n高度交互的分析工作流的技能 25。",
+    "size": 150064
+  },
+  {
+    "filename": "Quiver 深度解析：本体数据分析全指南.pdf",
+    "pages": 2,
+    "text_length": 1797,
+    "metadata": {
+      "Title": "Quiver 深度解析：本体数据分析全指南",
+      "Producer": "Skia/PDF m145 Google Docs Renderer"
+    },
+    "extractable": true,
+    "error": null,
+    "preview": "“Deep Dive: Data Analysis in Quiver”（深度解析：在 Quiver 中进行数据分析）是\nlearn.palantir.com 平台上的一门核心进阶课程。该课程由 Ontologize 团队指导，旨在教授用\n户如何利用 Palantir Foundry 的 Quiver 应用，针对本体对象（Ontology Objects）和时间序列\n数据进行深度分析和可视化看板构建 1, 2。\n以下是基于来源对该标题及课程内容的详细解释：\n1. 核心工具定位：为什么选择 Quiver？\nQuiver 是 Foundry 中专门用于分析“本体（Ontology）”的工具 1。\n● Quiver vs. Contour：如果你处理的是原始的、未对象化的数据集（Data Sets），应选\n择 Contour；如果你处理的是已经建模的本体对象，尤其是带有时间序列分量的大规\n模数据，Quiver 是首选工具 3, 4。\n● 可嵌入性：Quiver 构建的分析结果和看板可以无缝嵌入到 Workshop 应用程序、对象\n视图（Object Views）或 Notepad 报告中 2, 5。\n2. 业务场景：Titanium Works 制造公司\n课程设定了具体的业务背景，让用户扮演数据分析师的角色：\n● 目标：根据零件质量和设备性能，识别出最需要检查和维护的关键设备 6, 7。\n● 任务：执行无代码转换、可视化对象数据，并创建交互式看板来讲述数据背后的故事 6\n。\n3. “深度潜入”涵盖的关键技术环节\n该课程被称为“深度潜入”，因为它涵盖了 Quiver 中从基础数据准备到高级自定义逻辑的全流\n程：\n● 数据准备与对象连接 (Data Preparation & Joining)：\n● 学习如何将“设备（Equipment）”和“零件（Parts）”这两个不同的对象集通过 Transform\nTable（转换表） 进行连接 8, 9。\n● 技术限制：转换表的操作上限通常为 50,000 行，超过此规模需使用“物化（\nMaterializations）”技术进行高规模转换 10。\n● 参数化与交互式过滤 (Parameters)：\n● 创建选择参数（如工厂选择下拉菜单），使用户能在看板侧边栏直接控制过滤器，提升\n用户体验并防止多人操作时的过滤器冲突 11, 12。\n● 衍生逻辑与公式 (Derived Columns & Formulas)：\n● 利用公式和分组（Group By）功能计算衍生指标，例如“平均纯度（Average Purity）”或\n“实际产出百分比（Actual Percent Output）” 13, 14。\n● 视觉函数 (Visual Functions)：\n● 这是 Quiver 的核心进阶功能。用户可以构建可重用的逻辑块（包括转换、可视化和计\n算步骤），并将其发布供全平台的同事在不同的分析中重复使用 15, 16。\n● 高级可视化与 Vega 图表：\n● 除了基础的柱状图和散点图外，课程还教导如何使用 Vega 库编写自定义图表逻辑（如\n箱线图 Box Plot），突破标准组件的限制 17-19。\n4. 逻辑视图：画布 (Canvas) 与 图表 (Graph)\n课程还讲解了 Quiver 独特的两种工作模式：\n● 画布模式 (Canvas Mode)：一种直观、可排版的视图，方便组织组件位置和大小，类似\n于最终呈现给用户的页面 20, 21。 ● 图表模式 (Graph Mode)：显示分析中的逻辑依赖关系和血缘（Lineage），帮助开发者\n理解各步骤是如何互相关联的 20, 22。\n5. 成果发布与集成\n● 交互式看板：将分析卡片整合为精简、面向决策者的 Dashboard 23。\n● 跨应用集成：看板可以作为模板输入，集成到 Workshop 模块中，实现更强大的运营\n能力 24。\n● 报告生成：通过 Notepad 模板将 Quiver 图表转化为易于打印和发送邮件的专业报告\n2, 25。\n总结来说，这个标题代表了一次从本体数据到业务见解的全生命周期实践。它教导用户如何通\n过 Quiver 的无代码环境，将静态的工业设备数据转化为一套具备复杂逻辑推理、可重用性高\n且能驱动决策的专业分析看板。",
+    "size": 168149
+  }
+]
